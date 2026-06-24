@@ -7,39 +7,98 @@
     
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcfbfa;
             color: #333333;
             text-align: center;
             padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         h1 {
-            color: #4a0e17; /* نیا مرون رنگ */
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            color: #4a0e17;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
         }
 
-        p {
-            font-size: 1.1rem;
-            color: #4a5568;
+        .subtitle {
+            font-size: 1rem;
+            color: #718096;
             margin-bottom: 30px;
         }
 
-        ul {
+        /* پروڈکٹ کارڈ کا اسٹائل */
+        .product-card {
+            background-color: #fffaf0;
+            border: 2px dashed #4a0e17;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .product-title {
+            color: #4a0e17;
+            font-size: 1.4rem;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .features-list {
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .features-list li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+            color: #2d3748;
+        }
+
+        /* ایمیزون افیلیٹ بٹن */
+        .amazon-btn {
+            display: block;
+            background-color: #ff9900; /* ایمیزون کا آفیشل اورینج رنگ */
+            color: #111111;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 153, 0, 0.3);
+            text-align: center;
+        }
+
+        .amazon-btn:hover {
+            background-color: #e68a00;
+            transform: translateY(-2px);
+        }
+
+        /* سوشل لنکس کے بٹنز */
+        .social-links {
             list-style: none;
             padding: 0;
-            max-width: 400px;
-            margin: 0 auto;
+            margin-top: 30px;
         }
 
-        li {
-            margin-bottom: 15px;
+        .social-links li {
+            margin-bottom: 12px;
         }
 
-        a {
+        .social-btn {
             display: block;
-            background-color: #4a0e17; /* نیا مرون رنگ */
+            background-color: #4a0e17;
             color: white;
             text-decoration: none;
             padding: 12px 20px;
@@ -48,26 +107,41 @@
             transition: background-color 0.3s ease;
         }
 
-        a:hover {
+        .social-btn:hover {
             background-color: #6b1d2f;
         }
     </style>
 </head>
 <body>
 
-    <h1>Kumora Holly Click</h1>
-    <p>میری آفیشل ویب سائٹ اور پورٹ فولیو پر خوش آمدید۔</p>
+    <div class="container">
+        <h1>Kumora Holly Click</h1>
+        <p class="subtitle">Welcome to my Official Brand Portfolio</p>
 
-    <ul>
-        <li><a href="https://www.blogger.com" target="_blank">🌐 میرا آفیشل بلاگ وزٹ کریں</a></li>
-        <li><a href="https://www.pinterest.com" target="_blank">📌 Pinterest پر فالو کریں</a></li>
-        <li><a href="https://www.tiktok.com" target="_blank">🎵 TikTok پر فالو کریں</a></li>
-        <li><a href="https://www.youtube.com" target="_blank">🎬 YouTube Shorts دیکھیں</a></li>
-    </ul>
+        <div class="product-card">
+            <h2 class="product-title">⚡ Electric Milk Frother ⚡</h2>
+            <p style="text-align: center; color: #4a5568; font-size: 0.95rem;">کافی اور چائے کو جھاگ دار بنانے والا بہترین ہینڈ بلینڈر!</p>
+            <ul class="features-list">
+                <li>✨ سیکنڈوں میں کریمی جھاگ (Creamy Froth) بنائے۔</li>
+                <li>🔋 طاقتور موٹر اور پریمیم کوالٹی ڈیزائن۔</li>
+                <li>☕ کافی، لیٹے (Latte) اور ہاٹ چاکلیٹ کے لیے بہترین۔</li>
+                <li>🧼 صاف کرنے اور استعمال کرنے میں انتہائی آسان۔</li>
+            </ul>
+            
+            <a href="https://www.amazon.com" target="_blank" class="amazon-btn">🛒 Buy Now on Amazon</a>
+        </div>
+
+        <ul class="social-links">
+            <li><a href="https://www.blogger.com" target="_blank" class="social-btn">🌐 میرا آفیشل بلاگ وزٹ کریں</a></li>
+            <li><a href="https://www.pinterest.com" target="_blank" class="social-btn">📌 Pinterest پر فالو کریں</a></li>
+            <li><a href="https://www.tiktok.com" target="_blank" class="social-btn">🎵 TikTok پر فالو کریں</a></li>
+            <li><a href="https://www.youtube.com" target="_blank" class="social-btn">🎬 YouTube Shorts دیکھیں</a></li>
+        </ul>
+    </div>
 
     <script>
         window.onload = function() {
-            alert("Kumora Holly Click پر خوش آمدید! ❤️");
+            alert("Kumora Holly Click پر خوش آمدید! ❤️\nہمارا نیا پروڈکٹ پیج اب لائیو ہے۔");
         };
     </script>
 
