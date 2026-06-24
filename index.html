@@ -6,75 +6,103 @@
     <title>Kumora Holly Click</title>
     
     <style>
+        /* حرکت کرتا ہوا خوبصورت بیک گراؤنڈ کلر */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fcfbfa;
+            background: linear-gradient(-45deg, #4a0e17, #2d3748, #1a202c, #6b1d2f);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
             color: #333333;
             text-align: center;
             padding: 40px 20px;
             margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
-            max-width: 500px;
-            margin: 0 auto;
-            background: white;
+            max-width: 480px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
             padding: 30px 20px;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        /* پروفیشنل اوتار (تصویر کی جگہ) */
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid #4a0e17;
+            margin: 0 auto 15px auto;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'); /* پروفیشنل اوتار گرافک */
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         h1 {
             color: #4a0e17;
             font-size: 2.2rem;
-            margin-bottom: 5px;
+            margin: 0 0 5px 0;
         }
 
         .subtitle {
             font-size: 1rem;
-            color: #718096;
-            margin-bottom: 30px;
+            color: #4a5568;
+            margin-bottom: 25px;
+            font-weight: 500;
         }
 
         /* پروڈکٹ کارڈ کا اسٹائل */
         .product-card {
             background-color: #fffaf0;
             border: 2px dashed #4a0e17;
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             text-align: right;
             direction: rtl;
         }
 
         .product-title {
             color: #4a0e17;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-top: 0;
             text-align: center;
         }
 
         .features-list {
             padding-right: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .features-list li {
             margin-bottom: 8px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #2d3748;
         }
 
         /* ایمیزون افیلیٹ بٹن */
         .amazon-btn {
             display: block;
-            background-color: #ff9900; /* ایمیزون کا آفیشل اورینج رنگ */
+            background-color: #ff9900;
             color: #111111;
             text-decoration: none;
-            padding: 14px 20px;
+            padding: 12px 20px;
             border-radius: 30px;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(255, 153, 0, 0.3);
             text-align: center;
@@ -89,7 +117,7 @@
         .social-links {
             list-style: none;
             padding: 0;
-            margin-top: 30px;
+            margin: 25px 0 0 0;
         }
 
         .social-links li {
@@ -102,25 +130,28 @@
             color: white;
             text-decoration: none;
             padding: 12px 20px;
-            border-radius: 8px;
+            border-radius: 12px;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .social-btn:hover {
             background-color: #6b1d2f;
+            transform: translateY(-1px);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <div class="profile-img"></div>
+        
         <h1>Kumora Holly Click</h1>
-        <p class="subtitle">Welcome to my Official Brand Portfolio</p>
+        <div class="subtitle">Welcome to my Official Brand Portfolio</div>
 
         <div class="product-card">
             <h2 class="product-title">⚡ Electric Milk Frother ⚡</h2>
-            <p style="text-align: center; color: #4a5568; font-size: 0.95rem;">کافی اور چائے کو جھاگ دار بنانے والا بہترین ہینڈ بلینڈر!</p>
+            <p style="text-align: center; color: #4a5568; font-size: 0.9rem; margin-top: 0;">کافی اور چائے کو جھاگ دار بنانے والا بہترین ہینڈ بلینڈر!</p>
             <ul class="features-list">
                 <li>✨ سیکنڈوں میں کریمی جھاگ (Creamy Froth) بنائے۔</li>
                 <li>🔋 طاقتور موٹر اور پریمیم کوالٹی ڈیزائن۔</li>
@@ -138,12 +169,6 @@
             <li><a href="https://www.youtube.com" target="_blank" class="social-btn">🎬 YouTube Shorts دیکھیں</a></li>
         </ul>
     </div>
-
-    <script>
-        window.onload = function() {
-            alert("Kumora Holly Click پر خوش آمدید! ❤️\nہمارا نیا پروڈکٹ پیج اب لائیو ہے۔");
-        };
-    </script>
 
 </body>
 </html>
