@@ -1,174 +1,332 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kumora Holly Click</title>
+    <title>Kumora Holly Click | Premium Digital Ecosystem</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* حرکت کرتا ہوا خوبصورت بیک گراؤنڈ کلر */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(-45deg, #4a0e17, #2d3748, #1a202c, #6b1d2f);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: #333333;
-            text-align: center;
-            padding: 40px 20px;
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030014;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
-
-        .container {
-            max-width: 480px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px 20px;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            backdrop-filter: blur(10px);
+        .glass-card:hover {
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            background: rgba(255, 255, 255, 0.04);
         }
-
-        /* پروفیشنل اوتار (تصویر کی جگہ) */
-        .profile-img {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            border: 4px solid #4a0e17;
-            margin: 0 auto 15px auto;
-            background-image: url('https://cdn-icons-png.flaticon.com/512/3135/3135715.png'); /* پروفیشنل اوتار گرافک */
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
         }
-
-        h1 {
-            color: #4a0e17;
-            font-size: 2.2rem;
-            margin: 0 0 5px 0;
+        .text-neon {
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
         }
-
-        .subtitle {
-            font-size: 1rem;
-            color: #4a5568;
-            margin-bottom: 25px;
-            font-weight: 500;
-        }
-
-        /* پروڈکٹ کارڈ کا اسٹائل */
-        .product-card {
-            background-color: #fffaf0;
-            border: 2px dashed #4a0e17;
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 25px;
-            text-align: right;
-            direction: rtl;
-        }
-
-        .product-title {
-            color: #4a0e17;
-            font-size: 1.3rem;
-            margin-top: 0;
-            text-align: center;
-        }
-
-        .features-list {
-            padding-right: 20px;
-            margin-bottom: 15px;
-        }
-
-        .features-list li {
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-            color: #2d3748;
-        }
-
-        /* ایمیزون افیلیٹ بٹن */
-        .amazon-btn {
-            display: block;
-            background-color: #ff9900;
-            color: #111111;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(255, 153, 0, 0.3);
-            text-align: center;
-        }
-
-        .amazon-btn:hover {
-            background-color: #e68a00;
-            transform: translateY(-2px);
-        }
-
-        /* سوشل لنکس کے بٹنز */
-        .social-links {
-            list-style: none;
-            padding: 0;
-            margin: 25px 0 0 0;
-        }
-
-        .social-links li {
-            margin-bottom: 12px;
-        }
-
-        .social-btn {
-            display: block;
-            background-color: #4a0e17;
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 12px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .social-btn:hover {
-            background-color: #6b1d2f;
-            transform: translateY(-1px);
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(168,85,247,0.12) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(50px);
+            z-index: -1;
         }
     </style>
 </head>
-<body>
+<body class="text-gray-200 antialiased">
 
-    <div class="container">
-        <div class="profile-img"></div>
-        
-        <h1>Kumora Holly Click</h1>
-        <div class="subtitle">Welcome to my Official Brand Portfolio</div>
+    <div class="blob top-0 left-0"></div>
+    <div class="blob top-[50%] right-0"></div>
 
-        <div class="product-card">
-            <h2 class="product-title">⚡ Electric Milk Frother ⚡</h2>
-            <p style="text-align: center; color: #4a5568; font-size: 0.9rem; margin-top: 0;">کافی اور چائے کو جھاگ دار بنانے والا بہترین ہینڈ بلینڈر!</p>
-            <ul class="features-list">
-                <li>✨ سیکنڈوں میں کریمی جھاگ (Creamy Froth) بنائے۔</li>
-                <li>🔋 طاقتور موٹر اور پریمیم کوالٹی ڈیزائن۔</li>
-                <li>☕ کافی، لیٹے (Latte) اور ہاٹ چاکلیٹ کے لیے بہترین۔</li>
-                <li>🧼 صاف کرنے اور استعمال کرنے میں انتہائی آسان۔</li>
-            </ul>
+    <nav class="sticky top-0 z-50 glass-card border-b border-white/10 px-4 py-4 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-bold tracking-wider text-white text-neon">
+                KUMORA <span class="text-purple-500">HOLLY CLICK</span>
+            </div>
             
-            <a href="https://www.amazon.com" target="_blank" class="amazon-btn">🛒 Buy Now on Amazon</a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#home" class="text-purple-400 hover:text-purple-300 transition-colors">Home</a>
+                <a href="#store" class="text-gray-400 hover:text-white transition-colors">Store</a>
+                <a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                <a href="#dashboard" class="text-gray-400 hover:text-white transition-colors">Dashboard</a>
+            </div>
+
+            <div>
+                <a href="#store" class="glass-card hover:bg-purple-600/20 text-white px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 border border-purple-500/30 neon-glow">
+                    Premium Store
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="relative max-w-7xl mx-auto px-6 pt-16 pb-24 text-center z-10 flex flex-col items-center justify-center">
+        
+        <div class="relative w-32 h-32 mb-8 flex items-center justify-center mx-auto group">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-fuchsia-500 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300 neon-glow"></div>
+            <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-purple-500/50 bg-black/40 flex items-center justify-center">
+                <img id="profile-img" src="./assets/images/png.jpg" alt="Kumora Holly Click Owner" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); document.getElementById('avatar-icon').style.display='none';" onerror="showBackupIcon()">
+                
+                <div id="avatar-icon" class="flex items-center justify-center text-4xl text-purple-400 w-full h-full">
+                    <i class="fas fa-user-astronaut animate-bounce"></i>
+                </div>
+            </div>
         </div>
 
-        <ul class="social-links">
-            <li><a href="https://www.blogger.com" target="_blank" class="social-btn">🌐 میرا آفیشل بلاگ وزٹ کریں</a></li>
-            <li><a href="https://www.pinterest.com" target="_blank" class="social-btn">📌 Pinterest پر فالو کریں</a></li>
-            <li><a href="https://www.tiktok.com" target="_blank" class="social-btn">🎵 TikTok پر فالو کریں</a></li>
-            <li><a href="https://www.youtube.com" target="_blank" class="social-btn">🎬 YouTube Shorts دیکھیں</a></li>
-        </ul>
-    </div>
+        <div class="mb-6">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs font-medium text-purple-300 border border-purple-500/30">
+                <span class="w-2 h-2 rounded-full bg-purple-500 animate-ping"></span>
+                The Future of Digital Ecosystems
+            </span>
+        </div>
 
+        <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+            <span class="bg-gradient-to-r from-purple-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent text-neon">
+                KUMORA HOLLY CLICK
+            </span>
+        </h1>
+
+        <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-10 leading-relaxed">
+            A premium digital space where sleek design, cutting-edge technology, engaging content, and your unique brand identity converge to redefine the digital experience.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#store" class="w-full sm:w-auto text-center bg-purple-600 hover:bg-purple-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-purple-600/30 transition-all duration-300 hover:-translate-y-1">
+                Explore Products <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="#blog" class="w-full sm:w-auto text-center glass-card hover:bg-white/5 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 border border-white/10">
+                Visit Blog
+            </a>
+        </div>
+    </header>
+
+    <section id="store" class="max-w-7xl mx-auto px-6 py-20 relative z-10 text-center">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured <span class="text-purple-500">Products</span></h2>
+            <p class="text-gray-400 max-w-xl mx-auto">Handpicked premium gadgets and tools curated for your lifestyle.</p>
+        </div>
+
+        <div class="flex justify-center items-center">
+            <div class="glass-card rounded-2xl overflow-hidden p-6 transition-all duration-300 hover:-translate-y-2 max-w-sm text-left">
+                <div class="w-full h-48 rounded-xl bg-purple-950/40 border border-purple-500/20 flex items-center justify-center mb-6 relative overflow-hidden">
+                    <i class="fas fa-mug-hot text-5xl text-purple-400/50"></i>
+                    <span class="absolute bottom-3 right-3 glass-card px-2 py-1 rounded text-xs text-purple-300 border border-purple-500/30">Kitchen Gadget</span>
+                </div>
+                
+                <div class="flex justify-between items-start mb-3">
+                    <h3 class="text-xl font-bold text-white tracking-wide">Electric Milk Frother</h3>
+                    <div class="flex items-center text-amber-400 text-sm">
+                        <i class="fas fa-star mr-1"></i> 4.8
+                    </div>
+                </div>
+                
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                    Create rich, creamy froth in seconds for your coffee, latte, or hot chocolate with this powerful and sleek premium hand blender.
+                </p>
+
+                <a href="#" target="_blank" class="w-full block text-center bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 text-white font-semibold py-3 rounded-xl transition-all duration-300 shadow-md shadow-purple-600/20">
+                    <i class="fab fa-amazon mr-2"></i> Buy Now on Amazon
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // If image fails to load, gracefully show the center-aligned backup icon
+        function showBackupIcon() {
+            document.getElementById('profile-img').style.display = 'none';
+            document.getElementById('avatar-icon').style.display = 'flex';
+        }
+    </script>
+<section id="blog" class="max-w-7xl mx-auto px-6 py-20 relative z-10 border-t border-white/5">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Latest From <span class="text-purple-500">The Blog</span></h2>
+            <p class="text-gray-400 max-w-xl mx-auto">Insights, trends, and deep dives into technology and smart lifestyle gadgets.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass-card rounded-2xl overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider">Kitchen Tech</span>
+                    <h3 class="text-2xl font-bold text-white mt-2 mb-4 hover:text-purple-400 transition-colors cursor-pointer">Why Every Coffee Lover Needs an Electric Milk Frother in 2026</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Discover how this small, futuristic kitchen gadget can save you hundreds of dollars on coffee shops by creating barista-level froth right at home...
+                    </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                    <span class="text-xs text-gray-500"><i class="far fa-calendar mr-1"></i> June 25, 2026</span>
+                    <a href="#" class="text-sm font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                        Read Article <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider">Smart Home</span>
+                    <h3 class="text-2xl font-bold text-white mt-2 mb-4 hover:text-purple-400 transition-colors cursor-pointer">The Art of Minimalist Home Organization</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Streamline your living space with these next-gen smart gadgets and design philosophies that maximize efficiency and visual comfort...
+                    </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                    <span class="text-xs text-gray-500"><i class="far fa-calendar mr-1"></i> June 24, 2026</span>
+                    <a href="#" class="text-sm font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                        Read Article <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="connect" class="max-w-4xl mx-auto px-6 py-20 relative z-10 border-t border-white/5 text-center">
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-white mb-3">Connect With <span class="text-purple-500">My Brand</span></h2>
+            <p class="text-gray-400">Follow Kumora Holly Click across all premium digital channels.</p>
+        </div>
+
+        <div class="space-y-4 max-w-xl mx-auto">
+            <a href="#" target="_blank" class="glass-card flex items-center justify-between p-4 rounded-xl hover:bg-red-600/10 hover:border-red-500/30 transition-all duration-300 group">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-red-600/20 flex items-center justify-center text-red-500 text-xl">
+                        <i class="fab fa-pinterest"></i>
+                    </div>
+                    <span class="font-semibold text-white group-hover:text-red-400 transition-colors">Follow on Pinterest</span>
+                </div>
+                <i class="fas fa-chevron-right text-gray-600 group-hover:text-red-400 transition-transform group-hover:translate-x-1"></i>
+            </a>
+
+            <a href="#" target="_blank" class="glass-card flex items-center justify-between p-4 rounded-xl hover:bg-cyan-600/10 hover:border-cyan-500/30 transition-all duration-300 group">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-600/20 flex items-center justify-center text-cyan-400 text-xl">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <span class="font-semibold text-white group-hover:text-cyan-400 transition-colors">Watch TikTok Videos</span>
+                </div>
+                <i class="fas fa-chevron-right text-gray-600 group-hover:text-cyan-400 transition-transform group-hover:translate-x-1"></i>
+            </a>
+
+            <a href="#" target="_blank" class="glass-card flex items-center justify-between p-4 rounded-xl hover:bg-red-600/10 hover:border-red-600/30 transition-all duration-300 group">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-red-600/20 flex items-center justify-center text-red-600 text-xl">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <span class="font-semibold text-white group-hover:text-red-500 transition-colors">Subscribe on YouTube Shorts</span>
+                </div>
+                <i class="fas fa-chevron-right text-gray-600 group-hover:text-red-500 transition-transform group-hover:translate-x-1"></i>
+            </a>
+        </div>
+    </section><section id="dashboard" class="max-w-7xl mx-auto px-6 py-20 relative z-10 border-t border-white/5">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ecosystem <span class="text-purple-500">Analytics</span></h2>
+            <p class="text-gray-400 max-w-xl mx-auto">Real-time platform performance, traffic insights, and business statistics.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-fuchsia-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-gray-400 text-sm font-medium">Total Visitors</span>
+                    <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-xs">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                <div class="text-3xl font-bold text-white tracking-tight">12,840</div>
+                <p class="text-emerald-400 text-xs mt-2 flex items-center gap-1">
+                    <i class="fas fa-arrow-trend-up"></i> +14.2% <span class="text-gray-500">this month</span>
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-fuchsia-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-gray-400 text-sm font-medium">Article Reads</span>
+                    <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-xs">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                </div>
+                <div class="text-3xl font-bold text-white tracking-tight">4,320</div>
+                <p class="text-emerald-400 text-xs mt-2 flex items-center gap-1">
+                    <i class="fas fa-arrow-trend-up"></i> +8.6% <span class="text-gray-500">this week</span>
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-fuchsia-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-gray-400 text-sm font-medium">Store Clicks</span>
+                    <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-xs">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                </div>
+                <div class="text-3xl font-bold text-white tracking-tight">1,150</div>
+                <p class="text-purple-400 text-xs mt-2 flex items-center gap-1">
+                    <i class="fas fa-bolt"></i> Premium Conversion
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-fuchsia-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-gray-400 text-sm font-medium">Bounce Rate</span>
+                    <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-xs">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                </div>
+                <div class="text-3xl font-bold text-white tracking-tight">24.3%</div>
+                <p class="text-emerald-400 text-xs mt-2 flex items-center gap-1">
+                    <i class="fas fa-arrow-trend-down"></i> -2.1% <span class="text-gray-500">Optimized</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl max-w-4xl mx-auto text-left">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-lg font-bold text-white">Weekly Traffic Overview</h3>
+                <span class="text-xs glass-card px-2 py-1 rounded text-purple-300 border border-purple-500/20">Live System</span>
+            </div>
+            <div class="flex items-end justify-between h-40 pt-4 gap-2 md:gap-4 border-b border-white/10 pb-2">
+                <div class="w-full bg-purple-600/20 hover:bg-purple-500/40 border border-purple-500/30 rounded-t-lg transition-all duration-500" style="height: 40%"></div>
+                <div class="w-full bg-purple-600/20 hover:bg-purple-500/40 border border-purple-500/30 rounded-t-lg transition-all duration-500" style="height: 65%"></div>
+                <div class="w-full bg-purple-600/20 hover:bg-purple-500/40 border border-purple-500/30 rounded-t-lg transition-all duration-500" style="height: 50%"></div>
+                <div class="w-full bg-purple-600/20 hover:bg-purple-500/40 border border-purple-500/30 rounded-t-lg transition-all duration-500" style="height: 85%"></div>
+                <div class="w-full bg-purple-500/40 hover:bg-purple-500/60 border border-purple-500/50 rounded-t-lg transition-all duration-500 h-[95%] neon-glow relative">
+                    <span class="absolute top-[-25px] left-1/2 -translate-x-1/2 text-[10px] text-purple-400 font-bold">Peak</span>
+                </div>
+                <div class="w-full bg-purple-600/20 hover:bg-purple-500/40 border border-purple-500/30 rounded-t-lg transition-all duration-500" style="height: 70%"></div>
+                <div class="w-full bg-purple-600/20 hover:bg-purple-500/40 border border-purple-500/30 rounded-t-lg transition-all duration-500" style="height: 60%"></div>
+            </div>
+            <div class="flex justify-between text-[11px] text-gray-500 pt-2 text-center">
+                <span class="w-full">Mon</span><span class="w-full">Tue</span><span class="w-full">Wed</span><span class="w-full">Thu</span><span class="w-full font-bold text-purple-400">Today</span><span class="w-full">Sat</span><span class="w-full">Sun</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="glass-card border-t border-white/10 mt-20 py-12 px-6 relative z-10 text-center">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-left">
+                <div class="text-lg font-bold text-white tracking-wider text-neon">
+                    KUMORA <span class="text-purple-500">HOLLY CLICK</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">© 2026 Kumora Holly Click. All rights reserved.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 text-xs text-gray-400">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors">Affiliate Disclosure</a>
+            </div>
+        </div>
+        <div class="max-w-4xl mx-auto text-[10px] text-gray-600 mt-6 pt-6 border-t border-white/5 leading-relaxed">
+            Disclaimer: Kumora Holly Click is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+        </div>
+    </footer>
 </body>
 </html>
