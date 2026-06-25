@@ -41,21 +41,18 @@
             box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.08), 0 0 30px rgba(168, 85, 247, 0.3);
         }
 
-        /* 🟢 HERO BUTTONS - EXPLORE REVIEWS (PURPLE BG, YELLOW STAR, 3D TEXT, GREEN GLOW ON HOVER) */
+        /* 🟢 HERO BUTTONS - EXPLORE REVIEWS (PURPLE INSIDE, ORIGINAL TEXT, YELLOW STAR, GREEN HOVER) */
         .hero-explore-btn {
-            background: rgba(88, 28, 135, 0.45); /* اندر سے جامنی رنگ */
-            border: 1px solid rgba(34, 197, 94, 0.4);
-            box-shadow: inset 0 0 10px rgba(168, 85, 247, 0.3), 0 0 15px rgba(34, 197, 94, 0.15);
+            background: rgba(88, 28, 135, 0.4); /* اندر سے جامنی رنگ */
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.1);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .text-3d {
-            text-shadow: 0 1px 0 #c084fc, 0 2px 0 #a855f7, 0 3px 0 #7e22ce, 0 4px 0 #581c87, 0 5px 6px rgba(0,0,0,0.6);
         }
         .hero-explore-btn:hover {
             transform: translateY(-8px); /* ماؤس لانے پر اوپر ابھرنا */
             border-color: #22c55e;
-            box-shadow: inset 0 0 15px rgba(168, 85, 247, 0.5), 0 0 30px rgba(34, 197, 94, 0.8);
-            background: rgba(88, 28, 135, 0.6);
+            box-shadow: 0 0 25px rgba(34, 197, 94, 0.7);
+            background: rgba(88, 28, 135, 0.5);
         }
 
         /* 🟡 HERO BUTTONS - READ BLOG (YELLOW GLOW) */
@@ -182,7 +179,7 @@
             </p>
             <div class="flex flex-wrap gap-6 justify-center">
                 <a href="reviews.html" class="hero-explore-btn text-white px-8 py-3.5 rounded-xl font-bold flex items-center gap-2">
-                    <i class="fas fa-star text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]"></i> <span class="text-3xl font-extrabold text-3d tracking-wide">Explore Reviews</span>
+                    <i class="fas fa-star text-yellow-400 drop-shadow-[0_0_6px_rgba(250,204,21,0.5)]"></i> Explore Reviews
                 </a>
                 <a href="https://kumorahollyclick.blogspot.com" target="_blank" class="hero-blog-btn text-white px-8 py-3.5 rounded-xl font-bold flex items-center gap-2">
                     <i class="fas fa-blog text-yellow-400"></i> Read Blog (Blogger)
