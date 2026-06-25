@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ur" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | KUMORA HOLLY CLICK</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0613;
+            color: #FFFFFF;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+        }
+        .neon-text {
+            text-shadow: 0 0 10px rgba(192, 38, 211, 0.6);
+        }
+        .glass-card {
+            background: rgba(23, 16, 35, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <header class="sticky top-0 z-50 glass-card border-b border-purple-500/20 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-fuchsia-500 neon-text">
+                KUMORA HOLLY CLICK
+            </a>
+            <nav class="flex flex-wrap gap-6 justify-center text-sm font-medium text-gray-300">
+                <a href="index.html" class="hover:text-purple-400 transition">🏠 Home</a>
+                <a href="blog.html" class="hover:text-purple-400 transition">📝 Blog</a>
+                <a href="reviews.html" class="hover:text-purple-400 transition">⭐ Product Reviews</a>
+                <a href="about.html" class="text-purple-400 border-b-2 border-purple-500 pb-1">👤 About</a>
+                <a href="contact.html" class="hover:text-purple-400 transition">📧 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 w-full flex-grow">
+        <div class="glass-card rounded-3xl p-8 border border-purple-500/20 text-center md:text-left flex flex-col md:flex-row gap-8 items-center">
+            
+            <div class="relative w-40 h-40 shrink-0 flex items-center justify-center group mx-auto md:mx-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-fuchsia-500 rounded-full blur opacity-70 neon-glow"></div>
+                <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-purple-500/50 bg-black/40 flex items-center justify-center">
+                    <img id="profile-img" src="./profile.jpg.png.png" alt="Kumora Holly Click Owner" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); document.getElementById('avatar-icon').style.display='none';">
+                    <div id="avatar-icon" class="flex items-center justify-center text-5xl text-purple-400 w-full h-full">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full">Founder & Creator</span>
+                <h1 class="text-3xl font-extrabold mt-3 mb-2">Kumora Holly Click Owner</h1>
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                    Welcome to the nexus of premium curation. I specialize in scouting the absolute best in smart kitchen utilities, modern tech gadgets, and seamless home organizational equipment designed for high-end digital lifestyle enthusiasts.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+            <div class="glass-card p-6 rounded-2xl border border-purple-500/10">
+                <h3 class="text-lg font-bold text-purple-400 mb-3"><i class="fas fa-bullseye mr-2"></i> Our Mission</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    To filter through thousands of commercial items and deliver only the highest-quality, ultra-functional smart gadgets that bring productivity and minimalist joy to your everyday life.
+                </p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl border border-purple-500/10">
+                <h3 class="text-lg font-bold text-fuchsia-400 mb-3"><i class="fas fa-eye mr-2"></i> Our Vision</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    To build a globally connected multi-channel affiliate ecosystem combining Pinterest viral trends, TikTok speed setups, and long-form scientific product reviews.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass-card border-t border-purple-500/20 px-6 py-8 mt-12 w-full">
+        <div class="max-w-7xl mx-auto text-center flex flex-col items-center gap-4">
+            <p class="text-sm text-gray-500">&copy; 2026 Kumora Holly Click. All rights reserved.</p>
+            <div class="flex gap-4 text-xs text-gray-400">
+                <a href="#" class="hover:text-purple-400">Privacy Policy</a>
+                <a href="#" class="hover:text-purple-400">Terms of Service</a>
+                <a href="#" class="hover:text-purple-400">Affiliate Disclosure</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
