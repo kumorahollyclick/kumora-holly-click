@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ur" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Reviews | KUMORA HOLLY CLICK</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0B0613;
+            color: #FFFFFF;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+        }
+        .neon-text {
+            text-shadow: 0 0 10px rgba(192, 38, 211, 0.6);
+        }
+        .glass-card {
+            background: rgba(23, 16, 35, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <header class="sticky top-0 z-50 glass-card border-b border-purple-500/20 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-fuchsia-500 neon-text">
+                KUMORA HOLLY CLICK
+            </a>
+            <nav class="flex flex-wrap gap-6 justify-center text-sm font-medium text-gray-300">
+                <a href="index.html" class="hover:text-purple-400 transition">🏠 Home</a>
+                <a href="blog.html" class="hover:text-purple-400 transition">📝 Blog</a>
+                <a href="reviews.html" class="text-purple-400 border-b-2 border-purple-500 pb-1">⭐ Product Reviews</a>
+                <a href="about.html" class="hover:text-purple-400 transition">👤 About</a>
+                <a href="contact.html" class="hover:text-purple-400 transition">📧 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 py-12 text-center w-full">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-3">
+            Honest <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-500">Product Reviews</span>
+        </h1>
+        <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">
+            Deep unboxing, premium testing, and honest pros & cons of the latest smart kitchen and home organization gadgets.
+        </p>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 py-6 w-full flex flex-col gap-8 flex-grow">
+        
+        <div class="glass-card rounded-3xl p-6 md:p-8 border border-purple-500/20 flex flex-col lg:flex-row gap-8 items-center">
+            <div class="w-full lg:w-1/3 aspect-square bg-purple-900/20 rounded-2xl flex items-center justify-center border border-purple-500/10 shrink-0">
+                <i class="fas fa-blender text-7xl text-purple-400 animate-pulse"></i>
+            </div>
+            
+            <div class="w-full lg:w-2/3 flex flex-col justify-between h-full">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full">Kitchen Gadgets</span>
+                    <h2 class="text-2xl font-bold mt-3 mb-2">Electric Milk Frother & Coffee Whisk</h2>
+                    
+                    <div class="flex items-center gap-1 text-amber-400 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span class="text-gray-400 ml-2">4.8 / 5.0 (Premium Rating)</span>
+                    </div>
+
+                    <p class="text-gray-400 text-sm md:text-base mb-6 leading-relaxed">
+                        <strong>Overview:</strong> This futuristic handheld milk frother gives that professional creamy touch to your morning lattes within 15 seconds. Built with high-grade stainless steel and a powerful silent motor.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-emerald-500/5 border border-emerald-500/20 p-4 rounded-xl">
+                            <h4 class="text-sm font-bold text-emerald-400 mb-2"><i class="fas fa-plus-circle mr-1"></i> Pros</h4>
+                            <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">
+                                <li>Super fast 15,000 RPM motor</li>
+                                <li>Ergonomic matte black design</li>
+                                <li>USB Rechargeable battery</li>
+                            </ul>
+                        </div>
+                        <div class="bg-rose-500/5 border border-rose-500/20 p-4 rounded-xl">
+                            <h4 class="text-sm font-bold text-rose-400 mb-2"><i class="fas fa-minus-circle mr-1"></i> Cons</h4>
+                            <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside">
+                                <li>Cannot crush solid ice particles</li>
+                                <li>Stand not included in basic pack</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-purple-500/10 flex flex-wrap items-center justify-between gap-4">
+                    <span class="text-xs text-gray-500">*As an Amazon Associate, I earn from qualifying purchases.</span>
+                    <a href="#" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-extrabold px-6 py-3 rounded-xl transition shadow-lg shadow-amber-500/20 text-sm">
+                        <i class="fab fa-amazon"></i> Buy on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="glass-card border-t border-purple-500/20 px-6 py-8 mt-12 w-full">
+        <div class="max-w-7xl mx-auto text-center flex flex-col items-center gap-4">
+            <p class="text-sm text-gray-500">&copy; 2026 Kumora Holly Click. All rights reserved.</p>
+            <div class="flex gap-4 text-xs text-gray-400">
+                <a href="#" class="hover:text-purple-400">Privacy Policy</a>
+                <a href="#" class="hover:text-purple-400">Terms of Service</a>
+                <a href="#" class="hover:text-purple-400">Affiliate Disclosure</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
