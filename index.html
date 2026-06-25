@@ -41,6 +41,34 @@
             box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.08), 0 0 30px rgba(168, 85, 247, 0.3);
         }
 
+        /* 🟢 HERO BUTTONS - EXPLORE REVIEWS (GREEN GLOW) */
+        .hero-explore-btn {
+            background: rgba(23, 16, 35, 0.4);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .hero-explore-btn:hover {
+            transform: translateY(-8px);
+            border-color: #22c55e;
+            box-shadow: 0 0 25px rgba(34, 197, 94, 0.7);
+            background: rgba(34, 197, 94, 0.15);
+        }
+
+        /* 🟡 HERO BUTTONS - READ BLOG (YELLOW GLOW) */
+        .hero-blog-btn {
+            background: rgba(23, 16, 35, 0.4);
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            box-shadow: 0 0 10px rgba(234, 179, 8, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .hero-blog-btn:hover {
+            transform: translateY(-8px);
+            border-color: #eab308;
+            box-shadow: 0 0 25px rgba(234, 179, 8, 0.7);
+            background: rgba(234, 179, 8, 0.15);
+        }
+
         /* 📦 AMAZON BUTTON NEW GLOW AND HOVER LOOK */
         .amazon-glow-btn {
             background: #FF9900;
@@ -149,12 +177,12 @@
             <p class="text-gray-300 max-w-2xl text-base md:text-lg mb-8 font-medium">
                 Smart Kitchen Gadgets, Home Organization Ideas & Honest Product Reviews. Redefining your minimalist digital and lifestyle experience.
             </p>
-            <div class="flex flex-wrap gap-4 justify-center">
-                <a href="reviews.html" class="bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 text-white px-8 py-3 rounded-full font-semibold transition neon-glow">
-                    Explore Reviews
+            <div class="flex flex-wrap gap-6 justify-center">
+                <a href="reviews.html" class="hero-explore-btn text-white px-8 py-3.5 rounded-xl font-bold flex items-center gap-2">
+                    <i class="fas fa-star text-green-400"></i> Explore Reviews
                 </a>
-                <a href="https://kumorahollyclick.blogspot.com" target="_blank" class="border border-purple-500/50 hover:bg-purple-500/10 text-white px-8 py-3 rounded-full font-semibold transition">
-                    Read Blog (Blogger)
+                <a href="https://kumorahollyclick.blogspot.com" target="_blank" class="hero-blog-btn text-white px-8 py-3.5 rounded-xl font-bold flex items-center gap-2">
+                    <i class="fas fa-blog text-yellow-400"></i> Read Blog (Blogger)
                 </a>
             </div>
         </div>
