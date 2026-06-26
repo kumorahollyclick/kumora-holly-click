@@ -1,93 +1,143 @@
 <!DOCTYPE html>
-<html lang="ur" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | KUMORA HOLLY CLICK</title>
+    <title>The Journal | KUMORA HOLLY CLICK</title>
+    <meta name="description" content="Insights, trends, and deep dives into smart lifestyle gadgets and minimalist home organization philosophies.">
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;650;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        :root {
+            --color-bg: #0A0A0B;
+            --color-card: #121214;
+            --color-accent: #D4AF37;
+            --color-accent-hover: #F3E5AB;
+            --color-text-primary: #F5F5F7;
+            --color-text-secondary: #86868B;
+        }
+
         body {
-            background-color: #0B0613;
-            color: #FFFFFF;
-            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text-primary);
+            font-family: 'Urbanist', sans-serif;
+            letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
         }
-        .neon-glow {
-            box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+
+        .premium-nav {
+            background: rgba(10, 10, 11, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         }
-        .neon-text {
-            text-shadow: 0 0 10px rgba(192, 38, 211, 0.6);
+
+        .luxury-card {
+            background: linear-gradient(180deg, rgba(20, 20, 22, 0.8) 0%, rgba(18, 18, 20, 0.9) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .glass-card {
-            background: rgba(23, 16, 35, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(168, 85, 247, 0.2);
+        .luxury-card:hover {
+            border-color: rgba(212, 175, 55, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .btn-link {
+            color: var(--color-accent);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-link:hover {
+            color: var(--color-accent-hover);
+            gap: 6px;
         }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
 
-    <header class="sticky top-0 z-50 glass-card border-b border-purple-500/20 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <a href="index.html" class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-fuchsia-500 neon-text">
-                KUMORA HOLLY CLICK
-            </a>
-            <nav class="flex flex-wrap gap-6 justify-center text-sm font-medium text-gray-300">
-                <a href="index.html" class="hover:text-purple-400 transition">🏠 Home</a>
-                <a href="blog.html" class="text-purple-400 border-b-2 border-purple-500 pb-1">📝 Blog</a>
-                <a href="reviews.html" class="hover:text-purple-400 transition">⭐ Product Reviews</a>
-                <a href="about.html" class="hover:text-purple-400 transition">👤 About</a>
-                <a href="contact.html" class="hover:text-purple-400 transition">📧 Contact</a>
+    <header class="sticky top-0 z-50 premium-nav px-6 py-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex justify-between items-center w-full md:w-auto">
+                <a href="index.html" class="text-xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+                    KUMORA <span class="text-[#D4AF37]">HOLLY CLICK</span>
+                </a>
+                <button id="menu-toggle" class="md:hidden text-neutral-400 hover:text-white focus:outline-none text-xl p-1">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row gap-6 md:gap-8 text-[14px] font-medium text-neutral-400 w-full md:w-auto text-center md:text-left pt-2 md:pt-0">
+                <a href="index.html" class="hover:text-white py-1 md:py-0 transition">Home</a>
+                <a href="blog.html" class="text-[#D4AF37] py-1 md:py-0 transition">Blog</a>
+                <a href="reviews.html" class="hover:text-white py-1 md:py-0 transition">Product Reviews</a>
+                <a href="about.html" class="hover:text-white py-1 md:py-0 transition">About</a>
+                <a href="contact.html" class="hover:text-white py-1 md:py-0 transition">Contact</a>
             </nav>
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto px-6 py-12 text-center w-full">
-        <h1 class="text-3xl md:text-5xl font-extrabold mb-3">
-            The <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-500">Kumora Blog</span>
-        </h1>
-        <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">
-            Insights, trends, and deep dives into smart lifestyle gadgets and home organization philosophies.
+    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <p class="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase mb-3">Our Journal</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">The Kumora Blog</h1>
+        <p class="text-[16px] md:text-[18px] text-neutral-400 font-light leading-relaxed">
+            Insights, design trends, and deep dives into smart lifestyle gadgets and minimalist home organization philosophies.
         </p>
     </section>
 
-    <main class="max-w-7xl mx-auto px-6 py-6 w-full grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow">
-        
-        <article class="glass-card rounded-2xl overflow-hidden border border-purple-500/10 flex flex-col justify-between group hover:border-purple-500/30 transition">
-            <div class="p-6">
-                <span class="text-xs font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-full">Kitchen Tech</span>
-                <h2 class="text-xl font-bold mt-4 mb-2 group-hover:text-purple-400 transition">Why Every Coffee Lover Needs an Electric Milk Frother in 2026</h2>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                    Discover how this small, futuristic kitchen gadget can save you hundreds of dollars on coffee shops by creating barista-level froth right at home...
-                </p>
-            </div>
-            <div class="p-6 pt-0 flex justify-between items-center border-t border-purple-500/5 mt-auto">
-                <span class="text-xs text-gray-500"><i class="far fa-calendar-alt mr-1"></i> June 25, 2026</span>
-                <a href="coffee-frother-blog.html" class="text-sm font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-1">Read Article <i class="fas fa-arrow-right text-xs"></i></a>
-            </div>
-        </article>
+    <main class="max-w-6xl mx-auto px-6 py-8 w-full flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <article class="luxury-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-md">Kitchen Tech</span>
+                    <h2 class="text-2xl font-bold text-white mt-4 mb-3 tracking-tight">Why Every Coffee Lover Needs an Electric Milk Frother</h2>
+                    <p class="text-neutral-400 text-sm font-light leading-relaxed mb-6">
+                        Discover how this small, futuristic kitchen gadget can save you hundreds of dollars on coffee shops by creating barista-level froth right at home...
+                    </p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-white/[0.03] text-xs text-neutral-500">
+                    <span><i class="far fa-calendar mr-1.5"></i> June 25, 2026</span>
+                    <a href="#" class="btn-link inline-flex items-center gap-1">Read Article <i class="fas fa-arrow-right text-[10px]"></i></a>
+                </div>
+            </article>
 
-        <article class="glass-card rounded-2xl overflow-hidden border border-purple-500/10 flex flex-col justify-between group hover:border-purple-500/30 transition">
-            <div class="p-6">
-                <span class="text-xs font-bold uppercase tracking-wider text-fuchsia-400 bg-fuchsia-500/10 px-2.5 py-1 rounded-full">Smart Home</span>
-                <h2 class="text-xl font-bold mt-4 mb-2 group-hover:text-purple-400 transition">The Art of Minimalist Home Organization</h2>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                    Streamline your living space with these next-gen smart gadgets and design philosophies that maximize efficiency and visual comfort...
-                </p>
-            </div>
-            <div class="p-6 pt-0 flex justify-between items-center border-t border-purple-500/5 mt-auto">
-                <span class="text-xs text-gray-500"><i class="far fa-calendar-alt mr-1"></i> June 24, 2026</span>
-                <a href="home-organization-blog.html" class="text-sm font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-1">Read Article <i class="fas fa-arrow-right text-xs"></i></a>
-            </div>
-        </article>
+            <article class="luxury-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-md">Smart Home</span>
+                    <h2 class="text-2xl font-bold text-white mt-4 mb-3 tracking-tight">The Art of Minimalist Home Organization</h2>
+                    <p class="text-neutral-400 text-sm font-light leading-relaxed mb-6">
+                        Streamline your living space with these next-gen smart gadgets and design philosophies that maximize efficiency and visual comfort...
+                    </p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-white/[0.03] text-xs text-neutral-500">
+                    <span><i class="far fa-calendar mr-1.5"></i> June 24, 2026</span>
+                    <a href="#" class="btn-link inline-flex items-center gap-1">Read Article <i class="fas fa-arrow-right text-[10px]"></i></a>
+                </div>
+            </article>
 
+        </div>
     </main>
 
-    <footer class="glass-card border-t border-purple-500/20 px-6 py-8 mt-12 w-full">
-        <div class="max-w-7xl mx-auto text-center flex flex-col items-center gap-4">
-            <p class="text-sm text-gray-500">&copy; 2026 Kumora Holly Click. All rights reserved.</p>
+    <footer class="premium-nav px-6 py-8 mt-20 w-full">
+        <div class="max-w-6xl mx-auto text-center flex flex-col items-center gap-4">
+            <p class="text-xs text-neutral-500">&copy; 2026 Kumora Holly Click. Built for Excellence.</p>
         </div>
     </footer>
 
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+            navMenu.classList.toggle('flex');
+            navMenu.classList.toggle('flex-col');
+        });
+    </script>
 </body>
 </html>
