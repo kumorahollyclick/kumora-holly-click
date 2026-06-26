@@ -36,15 +36,36 @@
         }
 
         .luxury-card {
-            background: var(--color-card);
+            background: linear-gradient(180deg, rgba(20, 20, 22, 0.8) 0%, rgba(18, 18, 20, 0.9) 100%);
             border: 1px solid rgba(255, 255, 255, 0.03);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .luxury-card:hover {
-            border-color: rgba(212, 175, 55, 0.2);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+            border-color: rgba(212, 175, 55, 0.25);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        /* ⭐ REDESIGNED PREMIUM PRODUCT CARD */
+        .premium-product-card {
+            background: linear-gradient(135deg, rgba(18, 18, 20, 0.9) 0%, rgba(13, 13, 15, 0.95) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .premium-product-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.03), transparent 50%);
+            pointer-events: none;
+        }
+        .premium-product-card:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(212, 175, 55, 0.02);
         }
 
         /* 👑 APPLE-STYLE BUTTON LOOK */
@@ -129,66 +150,71 @@
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-6 py-12 w-full">
-        <p class="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase mb-3 text-center md:text-left">Curated Collections</p>
-        <h2 class="text-2xl font-bold mb-8 text-center md:text-left text-white tracking-tight">Amazon Trending Focus</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-coffee"></i></div>
-                <h3 class="font-medium text-xs text-neutral-300">Coffee Gadgets</h3>
+    <section class="max-w-6xl mx-auto px-6 py-16 w-full border-t border-white/[0.03]">
+        <div class="flex flex-col items-center md:items-start mb-10">
+            <p class="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase mb-2">Curated Collections</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Amazon Trending Focus</h2>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-5">
+            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-coffee"></i></div>
+                <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Coffee Gadgets</h3>
             </div>
-            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-house-laptop"></i></div>
-                <h3 class="font-medium text-xs text-neutral-300">Home Org</h3>
+            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-house-laptop"></i></div>
+                <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Home Org</h3>
             </div>
-            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-kitchen-set"></i></div>
-                <h3 class="font-medium text-xs text-neutral-300">Kitchen Tech</h3>
+            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-kitchen-set"></i></div>
+                <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Kitchen Tech</h3>
             </div>
-            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-lightbulb"></i></div>
-                <h3 class="font-medium text-xs text-neutral-300">Smart Home</h3>
+            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-lightbulb"></i></div>
+                <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Smart Home</h3>
             </div>
-            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-soap"></i></div>
-                <h3 class="font-medium text-xs text-neutral-300">Cleaning</h3>
+            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-soap"></i></div>
+                <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Cleaning</h3>
             </div>
-            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-car"></i></div>
-                <h3 class="font-medium text-xs text-neutral-300">Car Aesthetics</h3>
+            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-car"></i></div>
+                <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Car Aesthetics</h3>
             </div>
-            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-laptop-code"></i></div>
-                <h3 class="font-medium text-xs text-neutral-300">Workspace</h3>
+            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-laptop-code"></i></div>
+                <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Workspace</h3>
             </div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-6 py-12 w-full">
-        <p class="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase mb-3 text-center md:text-left">Featured Analysis</p>
-        <h2 class="text-2xl font-bold mb-8 text-center md:text-left text-white tracking-tight">Top Editor's Choice</h2>
-        <div class="luxury-card rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center">
-            <div class="w-full md:w-1/3 aspect-square bg-neutral-900 rounded-2xl flex items-center justify-center border border-white/5">
-                <i class="fas fa-blender text-5xl text-[#D4AF37]"></i>
+    <section class="max-w-6xl mx-auto px-6 py-16 w-full border-t border-white/[0.03]">
+        <div class="flex flex-col items-center md:items-start mb-10">
+            <p class="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase mb-2">Featured Analysis</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Top Editor's Choice</h2>
+        </div>
+        <div class="premium-product-card rounded-3xl p-6 md:p-10 flex flex-col md:flex-row gap-10 items-center">
+            <div class="w-full md:w-2/5 aspect-square bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-2xl flex items-center justify-center border border-white/[0.04] p-8 shadow-inner relative group">
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#D4AF37]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <i class="fas fa-blender text-7xl text-[#D4AF37] filter drop-shadow-[0_10px_15px_rgba(212,175,55,0.15)]"></i>
             </div>
-            <div class="w-full md:w-2/3">
-                <span class="text-[11px] font-medium uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full">Kitchen Luxuries</span>
-                <h3 class="text-2xl font-bold mt-4 mb-2 text-white tracking-tight">Electric Milk Frother & Coffee Whisk</h3>
-                <div class="flex items-center gap-1 text-amber-400 mb-4 text-xs">
+            <div class="w-full md:w-3/5 flex flex-col items-start">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-md border border-[#D4AF37]/20">Kitchen Luxuries</span>
+                <h3 class="text-3xl font-extrabold mt-4 mb-3 text-white tracking-tight leading-tight">Electric Milk Frother & Coffee Whisk</h3>
+                <div class="flex items-center gap-1.5 text-amber-400 mb-5 text-xs bg-white/[0.02] px-3 py-1.5 rounded-full border border-white/[0.04]">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-neutral-400 ml-2">(4.8 Verified Rating)</span>
+                    <span class="text-neutral-400 ml-1.5 font-medium">4.8 (Verified Amazon Rating)</span>
                 </div>
-                <p class="text-neutral-400 mb-6 text-sm md:text-base font-light leading-relaxed">
-                    Engineered to create rich, micro-foam density within seconds. Elevate your morning lattes, matchas, or premium chocolates with a minimal footprint footprint.
+                <p class="text-neutral-400 mb-8 text-[15px] md:text-[16px] font-light leading-relaxed">
+                    Engineered to create rich, micro-foam density within seconds. Elevate your morning lattes, matchas, or premium chocolates with an ultra-quiet motor and a beautiful minimalist footprint.
                 </p>
-                <a href="#" class="inline-flex items-center gap-2 btn-premium-primary text-xs px-6 py-3 rounded-full">
-                    <i class="fab fa-amazon"></i> View Product On Amazon
+                <a href="#" class="inline-flex items-center gap-3 btn-premium-primary text-[13px] px-8 py-4 rounded-full shadow-lg">
+                    <i class="fab fa-amazon text-sm"></i> View Product On Amazon
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-6 py-12 w-full text-center">
+    <section class="max-w-6xl mx-auto px-6 py-16 w-full text-center border-t border-white/[0.03]">
         <h2 class="text-2xl font-bold text-white mb-2 tracking-tight">Connect With My Brand</h2>
         <p class="text-neutral-500 mb-8 text-sm font-light">Experience Kumora Holly Click across global modern platforms.</p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
