@@ -1,289 +1,221 @@
 <!DOCTYPE html>
-<html lang="ur" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUMORA HOLLY CLICK | Smart Kitchen & Home Gadgets</title>
+    <title>KUMORA HOLLY CLICK | Premium Smart Home & Kitchen Gadgets</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;650;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        :root {
+            --color-bg: #0A0A0B;
+            --color-card: #121214;
+            --color-accent: #D4AF37; /* Premium Polished Gold */
+            --color-accent-hover: #F3E5AB;
+            --color-text-primary: #F5F5F7; /* Apple White */
+            --color-text-secondary: #86868B; /* Apple Gray */
+        }
+
         body {
-            background-color: #0B0613;
-            color: #FFFFFF;
-            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text-primary);
+            font-family: 'Urbanist', sans-serif;
+            letter-spacing: -0.01em;
         }
-        .neon-glow {
-            box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
-        }
-        .neon-text {
-            text-shadow: 0 0 10px rgba(192, 38, 211, 0.6);
-        }
-        .glass-card {
-            background: rgba(23, 16, 35, 0.4);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-        }
-        .hero-section {
-            background: radial-gradient(circle at center, #1b0c30 0%, #0B0613 100%);
-            min-height: 50vh;
-        }
-        
-        /* 🎨 SPECIAL 75% PURPLE + 25% WHITE GRADIENT CARD WITH SHINY BORDER */
-        .premium-review-card {
-            background: linear-gradient(135deg, rgba(35, 15, 65, 0.85) 0%, rgba(30, 12, 55, 0.9) 75%, rgba(255, 255, 255, 0.12) 100%);
+
+        /* ✨ QUIET LUXURY GLASSMORPHISM */
+        .premium-nav {
+            background: rgba(10, 10, 11, 0.75);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(192, 38, 211, 0.4);
-            box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
-        }
-        .premium-review-card:hover {
-            border-color: rgba(192, 38, 211, 0.7);
-            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.08), 0 0 30px rgba(168, 85, 247, 0.3);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         }
 
-        /* 🟢 HERO BUTTONS - EXPLORE REVIEWS (PURPLE INSIDE, ORIGINAL TEXT, YELLOW STAR, GREEN HOVER) */
-        .hero-explore-btn {
-            background: rgba(88, 28, 135, 0.4);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            box-shadow: 0 0 10px rgba(34, 197, 94, 0.1);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .luxury-card {
+            background: var(--color-card);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .hero-explore-btn:hover {
-            transform: translateY(-8px);
-            border-color: #22c55e;
-            box-shadow: 0 0 25px rgba(34, 197, 94, 0.7);
-            background: rgba(88, 28, 135, 0.5);
+        .luxury-card:hover {
+            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
         }
 
-        /* 🟡 HERO BUTTONS - READ BLOG (YELLOW GLOW) */
-        .hero-blog-btn {
-            background: rgba(23, 16, 35, 0.4);
-            border: 1px solid rgba(234, 179, 8, 0.3);
-            box-shadow: 0 0 10px rgba(234, 179, 8, 0.1);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .hero-blog-btn:hover {
-            transform: translateY(-8px);
-            border-color: #eab308;
-            box-shadow: 0 0 25px rgba(234, 179, 8, 0.7);
-            background: rgba(234, 179, 8, 0.15);
-        }
-
-        /* 📦 AMAZON BUTTON NEW GLOW AND HOVER LOOK */
-        .amazon-glow-btn {
-            background: #FF9900;
+        /* 👑 APPLE-STYLE BUTTON LOOK */
+        .btn-premium-primary {
+            background: var(--color-accent);
             color: #000000;
-            border: 1px solid rgba(255, 153, 0, 0.5);
-            box-shadow: 0 0 12px rgba(255, 153, 0, 0.3);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            font-weight: 650;
         }
-        .amazon-glow-btn:hover {
-            transform: translateY(-6px);
-            background: #FFAA22;
-            border-color: #FFCC33;
-            box-shadow: 0 0 25px rgba(255, 153, 0, 0.8);
+        .btn-premium-primary:hover {
+            background: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
         }
 
-        /* ✨ INTERACTIVE EFFECTS FOR CATEGORIES & SOCIAL BUTTONS */
-        .category-btn {
-            background: rgba(35, 20, 55, 0.5);
-            border: 1px solid rgba(192, 38, 211, 0.3);
-            box-shadow: 0 0 10px rgba(192, 38, 211, 0.1);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .btn-premium-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--color-text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .category-btn:hover {
-            transform: translateY(-6px);
-            border-color: rgba(236, 72, 153, 0.8);
-            box-shadow: 0 0 20px rgba(192, 38, 211, 0.6);
-            background: rgba(45, 22, 75, 0.7);
+        .btn-premium-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
-        /* Social Hub Specific Custom Glows (Used Everywhere for Brand Consistency) */
-        .social-btn {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        /* Social Hub Consistent Branding */
+        .social-luxury-btn {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .social-btn:hover {
-            transform: translateY(-8px);
-        }
-        .pinterest-btn:hover {
-            border-color: #E60023;
-            box-shadow: 0 0 25px rgba(230, 0, 35, 0.6);
-            background: rgba(230, 0, 35, 0.15);
-        }
-        .tiktok-btn:hover {
-            border-color: #00f2fe;
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
-            background: rgba(0, 242, 254, 0.1);
-        }
-        .youtube-btn:hover {
-            border-color: #FF0000;
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
-            background: rgba(255, 0, 0, 0.15);
-        }
-
-        /* 💛 NEWSLETTER CARD WITH 4% YELLOW MIST AND RED SHINY BUTTON */
-        .newsletter-card {
-            background: linear-gradient(145deg, rgba(23, 16, 35, 0.5) 0%, rgba(23, 16, 35, 0.6) 96%, rgba(234, 179, 8, 0.15) 100%);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-        }
-        .subscribe-btn {
-            background: #FF0000;
-            border: 1px solid rgba(255, 0, 0, 0.5);
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .subscribe-btn:hover {
+        .social-luxury-btn:hover {
             transform: translateY(-5px);
-            background: #E60000;
-            border-color: #FF3333;
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
-            color: #FFFFFF;
         }
+        .pin-hover:hover { border-color: #E60023; color: #E60023; background: rgba(230, 0, 35, 0.05); }
+        .tk-hover:hover { border-color: #00f2fe; color: #00f2fe; background: rgba(0, 242, 254, 0.05); }
+        .yt-hover:hover { border-color: #FF0000; color: #FF0000; background: rgba(255, 0, 0, 0.05); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
 
-    <header class="sticky top-0 z-50 glass-card border-b border-purple-500/20 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <a href="index.html" class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-fuchsia-500 neon-text">
-                KUMORA HOLLY CLICK
+    <header class="sticky top-0 z-50 premium-nav px-6 py-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="text-xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+                KUMORA <span class="text-[#D4AF37]">HOLLY CLICK</span>
             </a>
-            <nav class="flex flex-wrap gap-6 justify-center text-sm font-medium text-gray-300">
-                <a href="index.html" class="text-purple-400 border-b-2 border-purple-500 pb-1">🏠 Home</a>
-                <a href="blog.html" class="hover:text-purple-400 transition">📝 Blog</a>
-                <a href="reviews.html" class="hover:text-purple-400 transition">⭐ Product Reviews</a>
-                <a href="about.html" class="hover:text-purple-400 transition">👤 About</a>
-                <a href="contact.html" class="hover:text-purple-400 transition">📧 Contact</a>
+            <nav class="flex gap-8 text-[14px] font-medium text-neutral-400">
+                <a href="index.html" class="text-[#D4AF37] transition">Home</a>
+                <a href="blog.html" class="hover:text-white transition">Blog</a>
+                <a href="reviews.html" class="hover:text-white transition">Product Reviews</a>
+                <a href="about.html" class="hover:text-white transition">About</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero-section flex items-center justify-center px-6 py-20 text-center">
-        <div class="max-w-7xl mx-auto flex flex-col items-center">
-            <div class="relative w-28 h-28 mb-6 flex items-center justify-center group">
-                <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-fuchsia-500 rounded-full blur opacity-70 neon-glow"></div>
-                <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-purple-500/50 bg-black/40 flex items-center justify-center">
-                    <img id="profile-img" src="./profile.jpg.png.png" alt="Kumora Holly Click Owner" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); document.getElementById('avatar-icon').style.display='none';">
-                    <div id="avatar-icon" class="flex items-center justify-center text-3xl text-purple-400 w-full h-full">
-                        <i class="fas fa-user-astronaut animate-bounce"></i>
-                    </div>
-                </div>
+    <section class="max-w-5xl mx-auto px-6 py-28 text-center flex flex-col items-center">
+        <div class="relative w-24 h-24 mb-8">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#D4AF37] to-transparent rounded-full opacity-20 blur-md"></div>
+            <div class="relative w-full h-full rounded-full overflow-hidden border border-white/10 bg-neutral-900 flex items-center justify-center">
+                <img id="profile-img" src="./profile.jpg.png.png" alt="Kumora Holly Click" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); document.getElementById('avatar-icon').style.display='none';">
+                <div id="avatar-icon" class="text-xl text-neutral-500"><i class="fas fa-circle-user"></i></div>
             </div>
+        </div>
 
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 uppercase">
-                KUMORA <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-500">HOLLY CLICK</span>
-            </h1>
-            <p class="text-gray-300 max-w-2xl text-base md:text-lg mb-8 font-medium">
-                Smart Kitchen Gadgets, Home Organization Ideas & Honest Product Reviews. Redefining your minimalist digital and lifestyle experience.
-            </p>
-            <div class="flex flex-wrap gap-6 justify-center">
-                <a href="reviews.html" class="hero-explore-btn text-white px-8 py-3.5 rounded-xl font-bold flex items-center gap-2">
-                    <i class="fas fa-star text-yellow-400 drop-shadow-[0_0_6px_rgba(250,204,21,0.5)]"></i> Explore Reviews
-                </a>
-                <a href="https://kumorahollyclick.blogspot.com" target="_blank" class="hero-blog-btn text-white px-8 py-3.5 rounded-xl font-bold flex items-center gap-2">
-                    <i class="fas fa-blog text-yellow-400"></i> Read Blog (Blogger)
-                </a>
-            </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl leading-[1.1]">
+            Elevating Your Daily <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB]">Living Experience.</span>
+        </h1>
+        <p class="text-[17px] md:text-[20px] text-neutral-400 max-w-2xl mb-10 font-light leading-relaxed">
+            Meticulously curated smart kitchen tech, refined home organization concepts, and transparent product analyses designed for modern minimalists.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
+            <a href="reviews.html" class="btn-premium-primary px-8 py-3.5 rounded-full text-sm flex items-center justify-center gap-2">
+                Explore Premium Reviews <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+            <a href="https://kumorahollyclick.blogspot.com" target="_blank" class="btn-premium-secondary px-8 py-3.5 rounded-full text-sm flex items-center justify-center gap-2">
+                Read Our Journal
+            </a>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-12 w-full">
-        <h2 class="text-2xl font-bold mb-8 text-center md:text-left border-l-4 border-purple-500 pl-3">Amazon Trending Categories</h2>
+    <section class="max-w-6xl mx-auto px-6 py-12 w-full">
+        <p class="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase mb-3 text-center md:text-left">Curated Collections</p>
+        <h2 class="text-2xl font-bold mb-8 text-center md:text-left text-white tracking-tight">Amazon Trending Focus</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            <div class="category-btn p-4 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-2">☕</div>
-                <h3 class="font-bold text-xs">Coffee Gadgets</h3>
+            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-coffee"></i></div>
+                <h3 class="font-medium text-xs text-neutral-300">Coffee Gadgets</h3>
             </div>
-            <div class="category-btn p-4 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-2">🏠</div>
-                <h3 class="font-bold text-xs">Home Organization</h3>
+            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-house-laptop"></i></div>
+                <h3 class="font-medium text-xs text-neutral-300">Home Org</h3>
             </div>
-            <div class="category-btn p-4 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-2">🍳</div>
-                <h3 class="font-bold text-xs">Smart Kitchen Tech</h3>
+            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-kitchen-set"></i></div>
+                <h3 class="font-medium text-xs text-neutral-300">Kitchen Tech</h3>
             </div>
-            <div class="category-btn p-4 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-2">💡</div>
-                <h3 class="font-bold text-xs">Smart Home</h3>
+            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-lightbulb"></i></div>
+                <h3 class="font-medium text-xs text-neutral-300">Smart Home</h3>
             </div>
-            <div class="category-btn p-4 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-2">🧼</div>
-                <h3 class="font-bold text-xs">Cleaning Gadgets</h3>
+            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-soap"></i></div>
+                <h3 class="font-medium text-xs text-neutral-300">Cleaning</h3>
             </div>
-            <div class="category-btn p-4 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-2">🚗</div>
-                <h3 class="font-bold text-xs">Car Aesthetics</h3>
+            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-car"></i></div>
+                <h3 class="font-medium text-xs text-neutral-300">Car Aesthetics</h3>
             </div>
-            <div class="category-btn p-4 rounded-2xl text-center cursor-pointer">
-                <div class="text-2xl mb-2">📱</div>
-                <h3 class="font-bold text-xs">Workspace Setup</h3>
+            <div class="luxury-card p-5 rounded-2xl text-center cursor-pointer">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-laptop-code"></i></div>
+                <h3 class="font-medium text-xs text-neutral-300">Workspace</h3>
             </div>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-12 w-full">
-        <h2 class="text-2xl font-bold mb-8 text-center md:text-left border-l-4 border-purple-500 pl-3">Top Product Review</h2>
-        <div class="premium-review-card rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center">
-            <div class="w-full md:w-1/3 aspect-square bg-purple-950/30 rounded-2xl flex items-center justify-center border border-purple-500/20 shadow-inner">
-                <i class="fas fa-blender text-6xl text-purple-400 filter drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]"></i>
+    <section class="max-w-6xl mx-auto px-6 py-12 w-full">
+        <p class="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase mb-3 text-center md:text-left">Featured Analysis</p>
+        <h2 class="text-2xl font-bold mb-8 text-center md:text-left text-white tracking-tight">Top Editor's Choice</h2>
+        <div class="luxury-card rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center">
+            <div class="w-full md:w-1/3 aspect-square bg-neutral-900 rounded-2xl flex items-center justify-center border border-white/5">
+                <i class="fas fa-blender text-5xl text-[#D4AF37]"></i>
             </div>
             <div class="w-full md:w-2/3">
-                <span class="text-xs font-bold uppercase tracking-widest text-purple-300 bg-purple-500/20 px-3 py-1 rounded-full border border-purple-500/30">Kitchen Gadgets</span>
-                <h3 class="text-2xl font-bold mt-3 mb-2 text-white text-shadow">Electric Milk Frother & Coffee Whisk</h3>
-                <div class="flex items-center gap-1 text-amber-400 mb-4 text-sm">
+                <span class="text-[11px] font-medium uppercase tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-full">Kitchen Luxuries</span>
+                <h3 class="text-2xl font-bold mt-4 mb-2 text-white tracking-tight">Electric Milk Frother & Coffee Whisk</h3>
+                <div class="flex items-center gap-1 text-amber-400 mb-4 text-xs">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-purple-200/80 ml-2 font-medium">(4.8 Rating)</span>
+                    <span class="text-neutral-400 ml-2">(4.8 Verified Rating)</span>
                 </div>
-                <p class="text-gray-200 mb-6 text-sm md:text-base leading-relaxed font-normal">
-                    Create rich, creamy froth in seconds for your coffee, latte, or hot chocolate with this powerful and sleek premium hand blender. Perfect for minimalist kitchens.
+                <p class="text-neutral-400 mb-6 text-sm md:text-base font-light leading-relaxed">
+                    Engineered to create rich, micro-foam density within seconds. Elevate your morning lattes, matchas, or premium chocolates with a minimal footprint footprint.
                 </p>
-                <a href="#" class="inline-flex items-center gap-2 amazon-glow-btn font-bold px-6 py-3 rounded-xl">
-                    <i class="fab fa-amazon"></i> Buy Now on Amazon
+                <a href="#" class="inline-flex items-center gap-2 btn-premium-primary text-xs px-6 py-3 rounded-full">
+                    <i class="fab fa-amazon"></i> View Product On Amazon
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-12 w-full text-center">
-        <h2 class="text-2xl font-bold mb-4">Connect With My Brand</h2>
-        <p class="text-gray-400 mb-8 text-sm">Follow Kumora Holly Click across all premium channels</p>
+    <section class="max-w-6xl mx-auto px-6 py-12 w-full text-center">
+        <h2 class="text-2xl font-bold text-white mb-2 tracking-tight">Connect With My Brand</h2>
+        <p class="text-neutral-500 mb-8 text-sm font-light">Experience Kumora Holly Click across global modern platforms.</p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            <a href="https://www.pinterest.com/kaleemullah541khan/" target="_blank" class="social-btn pinterest-btn glass-card p-4 rounded-xl flex items-center justify-center gap-3 border border-purple-500/10 group">
-                <i class="fab fa-pinterest text-red-500 text-xl group-hover:scale-110 transition"></i>
-                <span class="text-sm font-semibold">Follow on Pinterest</span>
+            <a href="https://www.pinterest.com/kaleemullah541khan/" target="_blank" class="social-luxury-btn pin-hover p-4 rounded-xl flex items-center justify-center gap-3 text-neutral-400 group">
+                <i class="fab fa-pinterest text-lg"></i>
+                <span class="text-sm font-medium">Pinterest</span>
             </a>
-            <a href="https://www.tiktok.com/@kumorahollyclick" target="_blank" class="social-btn tiktok-btn glass-card p-4 rounded-xl flex items-center justify-center gap-3 border border-purple-500/10 group">
-                <i class="fab fa-tiktok text-fuchsia-400 text-xl group-hover:scale-110 transition"></i>
-                <span class="text-sm font-semibold">Watch TikTok Videos</span>
+            <a href="https://www.tiktok.com/@kumorahollyclick" target="_blank" class="social-luxury-btn tk-hover p-4 rounded-xl flex items-center justify-center gap-3 text-neutral-400 group">
+                <i class="fab fa-tiktok text-lg"></i>
+                <span class="text-sm font-medium">TikTok</span>
             </a>
-            <a href="https://www.youtube.com/@KumoraHollyClick" target="_blank" class="social-btn youtube-btn glass-card p-4 rounded-xl flex items-center justify-center gap-3 border border-purple-500/10 group">
-                <i class="fab fa-youtube text-red-600 text-xl group-hover:scale-110 transition"></i>
-                <span class="text-sm font-semibold">Subscribe on YouTube</span>
+            <a href="https://www.youtube.com/@KumoraHollyClick" target="_blank" class="social-luxury-btn yt-hover p-4 rounded-xl flex items-center justify-center gap-3 text-neutral-400 group">
+                <i class="fab fa-youtube text-lg"></i>
+                <span class="text-sm font-medium">YouTube</span>
             </a>
         </div>
     </section>
 
-    <section class="max-w-3xl mx-auto px-6 py-12 w-full text-center">
-        <div class="newsletter-card rounded-3xl p-8">
-            <h3 class="text-xl font-bold mb-2">Join the Future Elite</h3>
-            <p class="text-gray-400 text-sm mb-6">Get weekly smart gadget updates and secret discounts direct to your inbox.</p>
-            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <input type="email" placeholder="Your premium email address" class="w-full bg-black/40 border border-purple-500/30 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 transition text-white" required>
-                <button type="submit" class="subscribe-btn text-white font-semibold px-6 py-3 rounded-xl text-sm whitespace-nowrap cursor-pointer">Subscribe</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="glass-card border-t border-purple-500/20 px-6 py-8 mt-12 w-full">
-        <div class="max-w-7xl mx-auto text-center flex flex-col items-center gap-4">
-            <p class="text-sm text-gray-500">&copy; 2026 Kumora Holly Click. All rights reserved.</p>
-            <div class="flex gap-4 text-xs text-gray-400">
-                <a href="#" class="hover:text-purple-400">Privacy Policy</a>
-                <a href="#" class="hover:text-purple-400">Terms of Service</a>
-                <a href="#" class="hover:text-purple-400">Affiliate Disclosure</a>
+    <footer class="premium-nav px-6 py-8 mt-12 w-full">
+        <div class="max-w-6xl mx-auto text-center flex flex-col items-center gap-4">
+            <p class="text-xs text-neutral-500">&copy; 2026 Kumora Holly Click. Built for Excellence.</p>
+            <div class="flex gap-6 text-xs text-neutral-400 font-light">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+                <a href="#" class="hover:text-white transition">Affiliate Disclosure</a>
             </div>
-            <p class="text-[10px] text-gray-600 max-w-4xl mt-2 leading-relaxed">
+            <p class="text-[10px] text-neutral-600 max-w-3xl mt-2 leading-relaxed font-light">
                 Disclaimer: Kumora Holly Click is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
             </p>
         </div>
