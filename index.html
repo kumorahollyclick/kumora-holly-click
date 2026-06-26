@@ -80,29 +80,30 @@
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(212, 175, 55, 0.02);
         }
 
-        /* 👑 APPLE-STYLE BUTTON LOOK */
+        /* 👑 LUXURY BUTTONS WITH SMOOTH MOVE EFFECT */
         .btn-premium-primary {
             background: var(--color-accent);
             color: #000000;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             font-weight: 650;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .btn-premium-primary:hover {
             background: var(--color-accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+            transform: translateY(-6px) scale(1.02); /* کلاسی موومنٹ اوپر کی طرف */
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
         }
 
         .btn-premium-secondary {
             background: rgba(255, 255, 255, 0.03);
             color: var(--color-text-primary);
             border: 1px solid rgba(255, 255, 255, 0.06);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .btn-premium-secondary:hover {
             background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-6px) scale(1.02); /* کلاسی موومنٹ اوپر کی طرف */
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.05);
         }
 
         /* Social Hub Consistent Branding */
@@ -112,7 +113,7 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .social-luxury-btn:hover {
-            transform: translateY(-4px);
+            transform: translateY(-6px);
         }
         .pin-hover:hover { border-color: #E60023; color: #E60023; background: rgba(230, 0, 35, 0.04); }
         .tk-hover:hover { border-color: #00f2fe; color: #00f2fe; background: rgba(0, 242, 254, 0.04); }
