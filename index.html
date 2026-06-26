@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>KUMORA HOLLY CLICK | Premium Smart Home & Kitchen Gadgets</title>
+    <meta name="description" content="Meticulously curated smart kitchen gadgets, refined home organization concepts, and transparent product analyses designed for modern minimalists.">
+    <meta name="keywords" content="smart kitchen gadgets, home organization ideas, best amazon kitchen tools, minimalist home setups, smart home automation">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kumorahollyclick.github.io/kumora-holly-click/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KUMORA HOLLY CLICK | Premium Smart Home & Kitchen Gadgets">
+    <meta property="og:description" content="Discover curated minimalist smart kitchen gadgets and honest amazon product reviews.">
+    <meta property="og:url" content="https://kumorahollyclick.github.io/kumora-holly-click/">
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +36,12 @@
             color: var(--color-text-primary);
             font-family: 'Urbanist', sans-serif;
             letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* ✨ QUIET LUXURY GLASSMORPHISM */
         .premium-nav {
-            background: rgba(10, 10, 11, 0.75);
+            background: rgba(10, 10, 11, 0.8);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
@@ -43,7 +55,7 @@
         }
         .luxury-card:hover {
             border-color: rgba(212, 175, 55, 0.25);
-            transform: translateY(-6px);
+            transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
         }
 
@@ -64,7 +76,7 @@
         }
         .premium-product-card:hover {
             border-color: rgba(212, 175, 55, 0.3);
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(212, 175, 55, 0.02);
         }
 
@@ -78,70 +90,86 @@
         .btn-premium-primary:hover {
             background: var(--color-accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
         }
 
         .btn-premium-secondary {
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.03);
             color: var(--color-text-primary);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .btn-premium-secondary:hover {
             background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.15);
             transform: translateY(-2px);
         }
 
         /* Social Hub Consistent Branding */
         .social-luxury-btn {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.01);
             border: 1px solid rgba(255, 255, 255, 0.04);
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .social-luxury-btn:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
         }
-        .pin-hover:hover { border-color: #E60023; color: #E60023; background: rgba(230, 0, 35, 0.05); }
-        .tk-hover:hover { border-color: #00f2fe; color: #00f2fe; background: rgba(0, 242, 254, 0.05); }
-        .yt-hover:hover { border-color: #FF0000; color: #FF0000; background: rgba(255, 0, 0, 0.05); }
+        .pin-hover:hover { border-color: #E60023; color: #E60023; background: rgba(230, 0, 35, 0.04); }
+        .tk-hover:hover { border-color: #00f2fe; color: #00f2fe; background: rgba(0, 242, 254, 0.04); }
+        .yt-hover:hover { border-color: #FF0000; color: #FF0000; background: rgba(255, 0, 0, 0.04); }
+
+        /* Mobile Menu Utility */
+        .mobile-menu-hide {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu-active {
+                display: flex !important;
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
 
     <header class="sticky top-0 z-50 premium-nav px-6 py-4">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <a href="index.html" class="text-xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-                KUMORA <span class="text-[#D4AF37]">HOLLY CLICK</span>
-            </a>
-            <nav class="flex gap-8 text-[14px] font-medium text-neutral-400">
-                <a href="index.html" class="text-[#D4AF37] transition">Home</a>
-                <a href="blog.html" class="hover:text-white transition">Blog</a>
-                <a href="reviews.html" class="hover:text-white transition">Product Reviews</a>
-                <a href="about.html" class="hover:text-white transition">About</a>
-                <a href="contact.html" class="hover:text-white transition">Contact</a>
+            <div class="flex justify-between items-center w-full md:w-auto">
+                <a href="index.html" class="text-xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+                    KUMORA <span class="text-[#D4AF37]">HOLLY CLICK</span>
+                </a>
+                <button id="menu-toggle" class="md:hidden text-neutral-400 hover:text-white focus:outline-none text-xl p-1" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row gap-6 md:gap-8 text-[14px] font-medium text-neutral-400 w-full md:w-auto text-center md:text-left pt-2 md:pt-0 border-t border-white/5 md:border-t-0">
+                <a href="index.html" class="text-[#D4AF37] py-1 md:py-0 transition">Home</a>
+                <a href="blog.html" class="hover:text-white py-1 md:py-0 transition">Blog</a>
+                <a href="reviews.html" class="hover:text-white py-1 md:py-0 transition">Product Reviews</a>
+                <a href="about.html" class="hover:text-white py-1 md:py-0 transition">About</a>
+                <a href="contact.html" class="hover:text-white py-1 md:py-0 transition">Contact</a>
             </nav>
         </div>
     </header>
 
-    <section class="max-w-5xl mx-auto px-6 py-28 text-center flex flex-col items-center">
+    <section class="max-w-5xl mx-auto px-6 py-20 md:py-28 text-center flex flex-col items-center">
         <div class="relative w-24 h-24 mb-8">
             <div class="absolute inset-0 bg-gradient-to-b from-[#D4AF37] to-transparent rounded-full opacity-20 blur-md"></div>
             <div class="relative w-full h-full rounded-full overflow-hidden border border-white/10 bg-neutral-900 flex items-center justify-center">
                 <img id="profile-img" src="./profile.jpg.png.png" alt="Kumora Holly Click" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); document.getElementById('avatar-icon').style.display='none';">
-                <div id="avatar-icon" class="text-xl text-neutral-500"><i class="fas fa-circle-user"></i></div>
+                <div id="avatar-icon" class="text-3xl text-[#D4AF37]"><i class="fas fa-circle-user"></i></div>
             </div>
         </div>
 
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl leading-[1.1]">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl leading-[1.1]">
             Elevating Your Daily <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB]">Living Experience.</span>
         </h1>
-        <p class="text-[17px] md:text-[20px] text-neutral-400 max-w-2xl mb-10 font-light leading-relaxed">
+        <p class="text-[16px] sm:text-[18px] md:text-[20px] text-neutral-400 max-w-2xl mb-10 font-light leading-relaxed">
             Meticulously curated smart kitchen tech, refined home organization concepts, and transparent product analyses designed for modern minimalists.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
-            <a href="reviews.html" class="btn-premium-primary px-8 py-3.5 rounded-full text-sm flex items-center justify-center gap-2">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto px-4 sm:px-0">
+            <a href="reviews.html" class="btn-premium-primary px-8 py-3.5 rounded-full text-sm flex items-center justify-center gap-2 shadow-sm">
                 Explore Premium Reviews <i class="fas fa-arrow-right text-xs"></i>
             </a>
             <a href="https://kumorahollyclick.blogspot.com" target="_blank" class="btn-premium-secondary px-8 py-3.5 rounded-full text-sm flex items-center justify-center gap-2">
@@ -155,33 +183,33 @@
             <p class="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase mb-2">Curated Collections</p>
             <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Amazon Trending Focus</h2>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-5">
-            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
-                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-coffee"></i></div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-5">
+            <div class="luxury-card p-5 md:p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-coffee"></i></div>
                 <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Coffee Gadgets</h3>
             </div>
-            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
-                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-house-laptop"></i></div>
+            <div class="luxury-card p-5 md:p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-house-laptop"></i></div>
                 <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Home Org</h3>
             </div>
-            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
-                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-kitchen-set"></i></div>
+            <div class="luxury-card p-5 md:p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-kitchen-set"></i></div>
                 <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Kitchen Tech</h3>
             </div>
-            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
-                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-lightbulb"></i></div>
+            <div class="luxury-card p-5 md:p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-lightbulb"></i></div>
                 <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Smart Home</h3>
             </div>
-            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
-                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-soap"></i></div>
+            <div class="luxury-card p-5 md:p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-soap"></i></div>
                 <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Cleaning</h3>
             </div>
-            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
-                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-car"></i></div>
+            <div class="luxury-card p-5 md:p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-car"></i></div>
                 <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Car Aesthetics</h3>
             </div>
-            <div class="luxury-card p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
-                <div class="text-2xl mb-4 text-[#D4AF37]"><i class="fas fa-laptop-code"></i></div>
+            <div class="luxury-card p-5 md:p-6 rounded-2xl text-center cursor-pointer flex flex-col items-center justify-center">
+                <div class="text-2xl mb-3 text-[#D4AF37]"><i class="fas fa-laptop-code"></i></div>
                 <h3 class="font-medium text-[13px] text-neutral-300 tracking-wide">Workspace</h3>
             </div>
         </div>
@@ -192,22 +220,22 @@
             <p class="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase mb-2">Featured Analysis</p>
             <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Top Editor's Choice</h2>
         </div>
-        <div class="premium-product-card rounded-3xl p-6 md:p-10 flex flex-col md:flex-row gap-10 items-center">
+        <div class="premium-product-card rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row gap-8 md:gap-10 items-center">
             <div class="w-full md:w-2/5 aspect-square bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-2xl flex items-center justify-center border border-white/[0.04] p-8 shadow-inner relative group">
                 <div class="absolute inset-0 bg-gradient-to-tr from-[#D4AF37]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <i class="fas fa-blender text-7xl text-[#D4AF37] filter drop-shadow-[0_10px_15px_rgba(212,175,55,0.15)]"></i>
+                <i class="fas fa-blender text-6xl sm:text-7xl text-[#D4AF37] filter drop-shadow-[0_10px_15px_rgba(212,175,55,0.15)]"></i>
             </div>
-            <div class="w-full md:w-3/5 flex flex-col items-start">
+            <div class="w-full md:w-3/5 flex flex-col items-center md:items-start text-center md:text-left">
                 <span class="text-[10px] font-bold uppercase tracking-widest text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-md border border-[#D4AF37]/20">Kitchen Luxuries</span>
-                <h3 class="text-3xl font-extrabold mt-4 mb-3 text-white tracking-tight leading-tight">Electric Milk Frother & Coffee Whisk</h3>
+                <h3 class="text-2xl sm:text-3xl font-extrabold mt-4 mb-3 text-white tracking-tight leading-tight">Electric Milk Frother & Coffee Whisk</h3>
                 <div class="flex items-center gap-1.5 text-amber-400 mb-5 text-xs bg-white/[0.02] px-3 py-1.5 rounded-full border border-white/[0.04]">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-neutral-400 ml-1.5 font-medium">4.8 (Verified Amazon Rating)</span>
                 </div>
-                <p class="text-neutral-400 mb-8 text-[15px] md:text-[16px] font-light leading-relaxed">
+                <p class="text-neutral-400 mb-8 text-[15px] sm:text-[16px] font-light leading-relaxed">
                     Engineered to create rich, micro-foam density within seconds. Elevate your morning lattes, matchas, or premium chocolates with an ultra-quiet motor and a beautiful minimalist footprint.
                 </p>
-                <a href="#" class="inline-flex items-center gap-3 btn-premium-primary text-[13px] px-8 py-4 rounded-full shadow-lg">
+                <a href="#" class="inline-flex items-center gap-3 btn-premium-primary text-[13px] px-8 py-4 rounded-full shadow-lg w-full sm:w-auto justify-center">
                     <i class="fab fa-amazon text-sm"></i> View Product On Amazon
                 </a>
             </div>
@@ -217,7 +245,7 @@
     <section class="max-w-6xl mx-auto px-6 py-16 w-full text-center border-t border-white/[0.03]">
         <h2 class="text-2xl font-bold text-white mb-2 tracking-tight">Connect With My Brand</h2>
         <p class="text-neutral-500 mb-8 text-sm font-light">Experience Kumora Holly Click across global modern platforms.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto px-4 sm:px-0">
             <a href="https://www.pinterest.com/kaleemullah541khan/" target="_blank" class="social-luxury-btn pin-hover p-4 rounded-xl flex items-center justify-center gap-3 text-neutral-400 group">
                 <i class="fab fa-pinterest text-lg"></i>
                 <span class="text-sm font-medium">Pinterest</span>
@@ -236,7 +264,7 @@
     <footer class="premium-nav px-6 py-8 mt-12 w-full">
         <div class="max-w-6xl mx-auto text-center flex flex-col items-center gap-4">
             <p class="text-xs text-neutral-500">&copy; 2026 Kumora Holly Click. Built for Excellence.</p>
-            <div class="flex gap-6 text-xs text-neutral-400 font-light">
+            <div class="flex flex-wrap justify-center gap-6 text-xs text-neutral-400 font-light">
                 <a href="#" class="hover:text-white transition">Privacy Policy</a>
                 <a href="#" class="hover:text-white transition">Terms of Service</a>
                 <a href="#" class="hover:text-white transition">Affiliate Disclosure</a>
@@ -246,6 +274,16 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+            navMenu.classList.toggle('mobile-menu-active');
+        });
+    </script>
 
 </body>
 </html>
