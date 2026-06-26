@@ -37,10 +37,47 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         }
 
+        /* 👑 DYNAMIC LUXURY CARD WITH SHINE & MOVE EFFECT */
         .luxury-card {
             background: linear-gradient(180deg, rgba(20, 20, 22, 0.8) 0%, rgba(18, 18, 20, 0.9) 100%);
             border: 1px solid rgba(255, 255, 255, 0.03);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            /* ➡️ SMOOTH MOTION SETUP */
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* 🚀 CURSOR OVER / HOVER EFFECTS */
+        .luxury-card:hover {
+            transform: translateY(-10px) scale(1.015); /* تورا موو اوپر کی طرف */
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.06);
+        }
+
+        /* ✨ AUTOMATIC ULTRA-PREMIUM SHINE EFFECT LINE */
+        .luxury-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(212, 175, 55, 0.15) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-25deg);
+            pointer-events: none;
+            transition: none;
+        }
+
+        /* Trigger Shine On Hover */
+        .luxury-card:hover::before {
+            left: 150%;
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
         }
     </style>
 </head>
@@ -75,7 +112,7 @@
     </section>
 
     <main class="max-w-4xl mx-auto px-6 py-4 w-full flex-grow">
-        <div class="luxury-card rounded-3xl p-8 md:p-10 text-center md:text-left border border-white/[0.02]">
+        <div class="luxury-card rounded-3xl p-8 md:p-10 text-center md:text-left border border-white/[0.02] cursor-pointer">
             <h2 class="text-2xl font-bold text-white mb-4 tracking-tight">The Vision</h2>
             <p class="text-neutral-400 font-light leading-relaxed text-sm md:text-base mb-6">
                 We believe that modern living spaces should inspire peace and high efficiency. By blending tech-forward utility with clean, luxury visual designs, our handpicked selections serve global tastemakers across the United States, United Kingdom, and beyond.
