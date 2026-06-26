@@ -57,16 +57,17 @@
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
         }
 
+        /* 👑 AMAZON BUTTON WITH SMOOTH LIFT EFFECT */
         .btn-premium-primary {
             background: var(--color-accent);
             color: #000000;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             font-weight: 650;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .btn-premium-primary:hover {
             background: var(--color-accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+            transform: translateY(-6px) scale(1.02); /* کلاسی موومنٹ اوپر کی طرف */
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
         }
     </style>
 </head>
