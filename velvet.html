@@ -244,14 +244,13 @@
         const sections = document.querySelectorAll('.section-block');
         const navItems = document.querySelectorAll('.nav-item');
 
-        window.addEventListener('scroll', () => {
+        // مینو کو ایکٹیو کرنے کا فنکشن
+        function activateMenu() {
             let currentSection = 'home';
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                // تھوڑا سا مارجن ایڈ کیا ہے تاکہ اسکرول یا کلک ہوتے ہی فوراً یلو ہو جائے
-                if (window.scrollY >= (sectionTop - 250)) {
+                if (window.scrollY >= (sectionTop - 280)) {
                     currentSection = section.getAttribute('id');
                 }
             });
@@ -264,6 +263,21 @@
                     item.classList.remove('text-[#D4AF37]');
                     item.classList.add('text-stone-400');
                 }
+            });
+        }
+
+        // اسکرول کرنے پر مینو بدلنے کے لیے
+        window.addEventListener('scroll', activateMenu);
+
+        // مینو آئٹمز پر کلک کرنے پر بھی فوراً یلو کرنے کے لیے
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                navItems.forEach(nav => {
+                    nav.classList.remove('text-[#D4AF37]');
+                    nav.classList.add('text-stone-400');
+                });
+                item.classList.remove('text-stone-400');
+                item.classList.add('text-[#D4AF37]');
             });
         });
     </script>
