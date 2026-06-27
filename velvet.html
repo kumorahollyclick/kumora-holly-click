@@ -22,6 +22,10 @@
     <nav class="nav-blur sticky top-0 z-50 border-b border-white/[0.05]">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold tracking-widest text-[#F5F5F4] font-serif">VELVET <span class="text-[#D4AF37] font-light">BREW</span></a>
+            <div class="hidden md:flex gap-10 text-[12px] uppercase tracking-[0.2em] text-stone-400 font-medium">
+                <a href="#">Home</a> <a href="#menu">Menu</a> <a href="#journey">Journey</a>
+            </div>
+            <a href="#" class="border border-[#D4AF37] text-[#D4AF37] px-6 py-2 rounded-full text-[12px] uppercase tracking-widest hover:bg-[#D4AF37] hover:text-[#0B0A09] transition-all">Reserve</a>
         </div>
     </nav>
 
@@ -29,31 +33,40 @@
     <section class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center">
         <div class="space-y-8">
             <h1 class="text-6xl md:text-8xl font-serif text-white leading-[0.9]">Crafted for the <span class="italic text-[#D4AF37]">Discerning</span> Palette.</h1>
-            <p class="text-stone-400 text-lg">Experience rich, single-origin espresso.</p>
+            <p class="text-stone-400 text-lg">Experience rich, single-origin espresso meticulously brewed to absolute perfection.</p>
+            <a href="#menu" class="inline-block btn-gold px-10 py-4 rounded-full font-bold tracking-widest uppercase text-xs">Explore Blends</a>
         </div>
         <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800" class="rounded-[2rem] w-full h-[500px] object-cover">
     </section>
 
-    <!-- Coffee Journey (Clickable) -->
-    <section class="max-w-3xl mx-auto px-6 py-24 border-t border-white/[0.05]">
-        <h2 class="text-4xl font-serif text-white text-center mb-16">The Coffee Journey</h2>
-        <div class="relative border-l border-stone-800 ml-4 md:ml-0 space-y-12">
-            <!-- 01 Farm -->
-            <div onclick="openModal('Ethical Farm Sourcing', 'We partner directly with high-altitude micro-lots to ensure fair wages and premium beans.')" class="relative pl-8 group cursor-pointer hover:pl-10 transition-all">
-                <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div>
-                <h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">01</h3>
-                <p class="text-white text-2xl font-serif group-hover:text-[#D4AF37]">Ethical Farm Sourcing</p>
-            </div>
-            <!-- 02 Selection -->
-            <div onclick="openModal('Precision Selection', 'Every batch undergoes rigorous quality testing to ensure only the top 1% reaches you.')" class="relative pl-8 group cursor-pointer hover:pl-10 transition-all">
-                <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div>
-                <h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">02</h3>
-                <p class="text-white text-2xl font-serif group-hover:text-[#D4AF37]">Precision Selection</p>
-            </div>
+    <!-- Features -->
+    <section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-3xl luxury-card"><h3 class="text-[#D4AF37] font-serif text-2xl mb-2">Rare Origins</h3><p class="text-stone-400 text-sm">Top 1% Arabica beans.</p></div>
+        <div class="p-8 rounded-3xl luxury-card"><h3 class="text-[#D4AF37] font-serif text-2xl mb-2">Artisanal Roast</h3><p class="text-stone-400 text-sm">Small batch precision.</p></div>
+        <div class="p-8 rounded-3xl luxury-card"><h3 class="text-[#D4AF37] font-serif text-2xl mb-2">Velvet Texture</h3><p class="text-stone-400 text-sm">Signature technique.</p></div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/[0.05]">
+        <h2 class="text-5xl font-serif text-white text-center mb-16">Featured Collection</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="luxury-card rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover"><div class="p-8"><h3 class="text-xl text-white font-serif mb-2">Gold Velvet</h3><span class="text-[#D4AF37] font-bold block mb-4">$12.00</span><button class="w-full border border-white/20 py-2 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all uppercase text-[10px] tracking-widest">Buy Now</button></div></div>
+            <div class="luxury-card rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover"><div class="p-8"><h3 class="text-xl text-white font-serif mb-2">Obsidian Dark</h3><span class="text-[#D4AF37] font-bold block mb-4">$14.50</span><button class="w-full border border-white/20 py-2 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all uppercase text-[10px] tracking-widest">Buy Now</button></div></div>
+            <div class="luxury-card rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover"><div class="p-8"><h3 class="text-xl text-white font-serif mb-2">Silk Cream</h3><span class="text-[#D4AF37] font-bold block mb-4">$16.00</span><button class="w-full border border-white/20 py-2 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all uppercase text-[10px] tracking-widest">Buy Now</button></div></div>
         </div>
     </section>
 
-    <!-- Modal Pop-up Structure -->
+    <!-- Coffee Journey (Clickable Modal Section) -->
+    <section id="journey" class="max-w-3xl mx-auto px-6 py-24 border-t border-white/[0.05]">
+        <h2 class="text-4xl font-serif text-white text-center mb-16">The Coffee Journey</h2>
+        <div class="relative border-l border-stone-800 ml-4 md:ml-0 space-y-12">
+            <div onclick="openModal('Ethical Farm Sourcing', 'We source from high-altitude micro-lots, ensuring each bean is hand-picked at peak ripeness.')" class="relative pl-8 group cursor-pointer hover:pl-10 transition-all"><div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div><h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">01</h3><p class="text-white text-2xl font-serif group-hover:text-[#D4AF37]">Ethical Farm Sourcing</p></div>
+            <div onclick="openModal('Precision Selection', 'Rigorous quality testing where only the top 1% of Arabica beans qualify for our signature roast.')" class="relative pl-8 group cursor-pointer hover:pl-10 transition-all"><div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div><h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">02</h3><p class="text-white text-2xl font-serif group-hover:text-[#D4AF37]">Precision Selection</p></div>
+            <div onclick="openModal('Artisanal Roasting', 'Small batch roasting using mathematical precision to unlock hidden flavor profiles.')" class="relative pl-8 group cursor-pointer hover:pl-10 transition-all"><div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div><h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">03</h3><p class="text-white text-2xl font-serif group-hover:text-[#D4AF37]">Artisanal Roasting</p></div>
+        </div>
+    </section>
+
+    <!-- Modal Popup -->
     <div id="coffeeModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
         <div class="bg-[#1a1918] border border-[#D4AF37]/30 p-8 rounded-3xl max-w-lg w-full relative">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-white hover:text-[#D4AF37]">✕</button>
@@ -62,7 +75,21 @@
         </div>
     </div>
 
-    <!-- Script for Modal -->
+    <!-- Gallery -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-serif text-white text-center mb-16">The Velvet Gallery</h2>
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            <div class="rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=600" class="w-full"></div>
+            <div class="rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=600" class="w-full"></div>
+            <div class="rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=600" class="w-full"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/[0.05] text-center text-stone-500 text-xs uppercase tracking-widest">
+        &copy; 2026 Velvet Brew. All Rights Reserved.
+    </footer>
+
     <script>
         function openModal(title, body) {
             document.getElementById('modalTitle').innerText = title;
@@ -75,6 +102,5 @@
             document.getElementById('coffeeModal').classList.remove('flex');
         }
     </script>
-
 </body>
 </html>
