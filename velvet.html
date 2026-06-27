@@ -58,7 +58,7 @@
                 <a href="#contact" class="hover:text-[#F5F5F4] transition duration-300">Contact</a>
             </nav>
             <div>
-                <a href="#reserve" class="text-[12px] font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-500 border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B0A09]">
+                <a href="#contact" class="text-[12px] font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-500 border border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B0A09]">
                     Book A Table
                 </a>
             </div>
@@ -151,14 +151,11 @@
     <!-- 🖼️ STEP 12: GALLERY SECTION -->
     <section id="gallery" class="py-24 px-6 relative bg-[#12100E]/20 border-t border-white/[0.01]">
         <div class="max-w-7xl mx-auto">
-            
             <div class="flex flex-col items-center gap-3 text-center mb-16">
                 <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Atmosphere</span>
                 <h2 class="text-3xl md:text-5xl font-bold font-serif text-white">Our Visual Sanctuary</h2>
                 <div class="w-12 h-[1px] bg-[#D4AF37]/40 mt-2"></div>
             </div>
-
-            <!-- 4 Column Premium Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="h-80 rounded-2xl overflow-hidden border border-white/[0.02] shadow-xl">
                     <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=400" alt="Gallery 1" class="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-700">
@@ -173,6 +170,52 @@
                     <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=400" alt="Gallery 4" class="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-700">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ✉️ STEP 13: CONTACT & RESERVATION SECTION -->
+    <section id="contact" class="py-24 px-6 relative border-t border-white/[0.01]">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="flex flex-col items-center gap-3 text-center mb-16">
+                <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Reservations</span>
+                <h2 class="text-3xl md:text-5xl font-bold font-serif text-white">Secure Your Velvet Table</h2>
+                <div class="w-12 h-[1px] bg-[#D4AF37]/40 mt-2"></div>
+            </div>
+
+            <!-- Luxury Glassmorphism Form -->
+            <form class="luxury-card rounded-[2.5rem] p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex flex-col gap-2">
+                    <label class="text-[11px] font-medium uppercase tracking-widest text-stone-400">Full Name</label>
+                    <input type="text" placeholder="Marcus Vance" class="w-full bg-[#1C1917]/50 border border-white/[0.05] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#D4AF37]/40 transition duration-300">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-[11px] font-medium uppercase tracking-widest text-stone-400">Email Address</label>
+                    <input type="email" placeholder="marcus@example.com" class="w-full bg-[#1C1917]/50 border border-white/[0.05] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#D4AF37]/40 transition duration-300">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-[11px] font-medium uppercase tracking-widest text-stone-400">Guests Count</label>
+                    <select class="w-full bg-[#1C1917]/50 border border-white/[0.05] rounded-xl px-4 py-3 text-sm text-stone-400 focus:outline-none focus:border-[#D4AF37]/40 transition duration-300">
+                        <option>2 Persons</option>
+                        <option>4 Persons</option>
+                        <option>6+ Persons</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-[11px] font-medium uppercase tracking-widest text-stone-400">Date & Time</label>
+                    <input type="text" placeholder="October 24, 7:00 PM" class="w-full bg-[#1C1917]/50 border border-white/[0.05] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#D4AF37]/40 transition duration-300">
+                </div>
+                <div class="flex flex-col gap-2 md:col-span-2">
+                    <label class="text-[11px] font-medium uppercase tracking-widest text-stone-400">Special Preferences</label>
+                    <textarea rows="3" placeholder="Any dietary restrictions or window table request..." class="w-full bg-[#1C1917]/50 border border-white/[0.05] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#D4AF37]/40 transition duration-300"></textarea>
+                </div>
+                
+                <div class="md:col-span-2 mt-2">
+                    <button type="submit" class="w-full bg-[#D4AF37] text-[#0B0A09] text-[13px] font-bold tracking-widest uppercase py-4 rounded-xl hover:bg-[#c4a030] transition duration-300">
+                        Request Reservation
+                    </button>
+                </div>
+            </form>
 
         </div>
     </section>
