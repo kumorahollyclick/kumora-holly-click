@@ -28,6 +28,18 @@
         .steam-effect {
             animation: steam 4s ease-in-out infinite;
         }
+        /* ✨ پریمیم کارڈز کا گلاسمورفزم ایفیکٹ */
+        .luxury-card {
+            background: linear-gradient(180deg, rgba(28, 25, 23, 0.4) 0%, rgba(20, 18, 17, 0.6) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.03);
+            backdrop-filter: blur(12px);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .luxury-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -56,8 +68,6 @@
     <!-- 👑 STEP 8: HERO SECTION -->
     <section class="relative min-h-[90vh] flex items-center justify-center px-6 py-12 overflow-hidden">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-            
-            <!-- LEFT CONTENT -->
             <div class="flex flex-col gap-6 text-left max-w-xl">
                 <span class="text-[12px] font-semibold tracking-[0.25em] uppercase text-[#D4AF37]">The Ultimate Coffee Experience</span>
                 <h1 class="text-5xl md:text-7xl font-bold font-serif leading-[1.1] text-white">
@@ -75,25 +85,60 @@
                     </a>
                 </div>
             </div>
-
-            <!-- RIGHT VISUAL (LUXURY COFFEE IMAGE WITH LIVE STEAM) -->
             <div class="relative flex justify-center items-center">
-                <!-- Glowing Luxury Aura Behind Coffee -->
                 <div class="absolute w-72 h-72 rounded-full bg-[#D4AF37]/5 blur-[80px]"></div>
-                
-                <!-- ☕ Premium Coffee Cup Image Box -->
                 <div class="relative z-10 p-4">
-                    <!-- Live Moving Steam Overlay -->
                     <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
                         <div class="w-20 h-32 bg-gradient-to-t from-white/10 to-transparent rounded-full steam-effect mb-40"></div>
                     </div>
-                    <!-- Minimal Luxury Placeholder Image -->
-                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" 
-                         alt="Velvet Brew Premium Luxury Coffee" 
-                         class="w-[380px] h-[480px] object-cover rounded-[2rem] shadow-2xl border border-white/[0.03] grayscale hover:grayscale-0 transition-all duration-700">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Velvet Brew" class="w-[380px] h-[480px] object-cover rounded-[2rem] shadow-2xl border border-white/[0.03] grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- 🌟 STEP 9: FEATURES SECTION (THE CORE RITUAL) -->
+    <section id="story" class="py-24 px-6 relative border-t border-white/[0.02]">
+        <div class="max-w-7xl mx-auto text-center">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col items-center gap-3 mb-16">
+                <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Why Velvet Brew</span>
+                <h2 class="text-3xl md:text-5xl font-bold font-serif text-white">The Pillars of Our Craft</h2>
+                <div class="w-12 h-[1px] bg-[#D4AF37]/40 mt-2"></div>
+            </div>
+
+            <!-- 3 Luxury Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="luxury-card rounded-3xl p-8 text-left flex flex-col gap-5">
+                    <div class="text-[#D4AF37] text-2xl font-light">01 /</div>
+                    <h3 class="text-xl font-medium text-white tracking-wide">Rare Single-Origins</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed font-light">
+                        We source exclusively from micro-lot farms globally, picking only the top 1% of Arabica beans that pass our rigorous taste and profile test.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="luxury-card rounded-3xl p-8 text-left flex flex-col gap-5">
+                    <div class="text-[#D4AF37] text-2xl font-light">02 /</div>
+                    <h3 class="text-xl font-medium text-white tracking-wide">The Artisanal Roast</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed font-light">
+                        Roasted in small batches using state-of-the-art tech balanced with human intuition to unlock the absolute sweetest flavor notes possible.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="luxury-card rounded-3xl p-8 text-left flex flex-col gap-5">
+                    <div class="text-[#D4AF37] text-2xl font-light">03 /</div>
+                    <h3 class="text-xl font-medium text-white tracking-wide">Velvet Precision</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed font-light">
+                        Every temperature degree, every second of extraction, and every milligram of water is calculated to create a velvety texture that lingers elegantly.
+                    </p>
+                </div>
+
+            </div>
         </div>
     </section>
 
