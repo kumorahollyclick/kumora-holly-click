@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUMORA HOLLY CLICK | Premium Smart Home</title>
+    <title>Contact Us | KUMORA HOLLY CLICK</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;650;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #0A0A0B; color: #F5F5F7; font-family: 'Urbanist', sans-serif; -webkit-font-smoothing: antialiased; }
+        body { background: #0A0A0B; color: #F5F5F7; font-family: 'Urbanist', sans-serif; }
         .premium-nav { background: rgba(10, 10, 11, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.04); }
-        .luxury-card { background: linear-gradient(180deg, rgba(20, 20, 22, 0.8) 0%, rgba(18, 18, 20, 0.9) 100%); border: 1px solid rgba(255, 255, 255, 0.03); transition: all 0.4s ease; }
-        .luxury-card:hover { transform: translateY(-5px); }
-        /* 👑 SMOOTH LIFT EFFECT FOR BUTTONS */
-        .btn-premium-move { display: inline-flex; align-items: center; justify-content: center; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease; }
-        .btn-premium-move:hover { transform: translateY(-6px) scale(1.03) !important; box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25); }
+        .luxury-card { background: linear-gradient(180deg, rgba(20, 20, 22, 0.8) 0%, rgba(18, 18, 20, 0.9) 100%); border: 1px solid rgba(255, 255, 255, 0.03); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4); }
+        .input-premium { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); color: #FFFFFF; transition: all 0.3s ease; }
+        .input-premium:focus { outline: none; border-color: #D4AF37; background: rgba(255, 255, 255, 0.04); }
+        .btn-premium-move { display: block; width: 100%; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease; }
+        .btn-premium-move:hover { transform: translateY(-6px) scale(1.02) !important; box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
@@ -22,22 +21,33 @@
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <a href="index.html" class="text-xl font-extrabold tracking-tight">KUMORA <span class="text-[#D4AF37]">HOLLY CLICK</span></a>
             <nav class="flex gap-6 text-[14px] font-medium text-neutral-400">
-                <a href="index.html" class="text-[#D4AF37]">Home</a>
+                <a href="index.html" class="hover:text-white transition">Home</a>
                 <a href="blog.html" class="hover:text-white transition">Blog</a>
                 <a href="reviews.html" class="hover:text-white transition">Product Reviews</a>
                 <a href="about.html" class="hover:text-white transition">About</a>
-                <a href="contact.html" class="hover:text-white transition">Contact</a>
+                <a href="contact.html" class="text-[#D4AF37]">Contact</a>
             </nav>
         </div>
     </header>
-    <section class="max-w-5xl mx-auto px-6 py-24 text-center flex flex-col items-center">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Elevating Your Daily Living.</h1>
-        <p class="text-neutral-400 max-w-2xl mb-10 font-light">Meticulously curated smart kitchen tech and refined home organization concepts.</p>
-        <div class="flex gap-4">
-            <a href="reviews.html" class="btn-premium-move bg-[#D4AF37] text-black font-semibold px-8 py-3.5 rounded-full text-sm">Explore Premium Reviews</a>
-            <a href="https://kumorahollyclick.blogspot.com" target="_blank" class="btn-premium-move bg-white/5 border border-white/10 text-white px-8 py-3.5 rounded-full text-sm">Read Our Journal</a>
+    <main class="max-w-xl mx-auto px-6 py-20 w-full flex-grow">
+        <div class="luxury-card rounded-3xl p-8 border border-white/[0.02]">
+            <form action="#" method="POST" class="flex flex-col gap-6">
+                <div>
+                    <label class="block text-xs font-semibold tracking-wider text-neutral-400 uppercase mb-2">Full Name</label>
+                    <input type="text" placeholder="John Doe" class="w-full input-premium rounded-xl px-4 py-3.5 text-sm" required>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold tracking-wider text-neutral-400 uppercase mb-2">Email Address</label>
+                    <input type="email" placeholder="john@example.com" class="w-full input-premium rounded-xl px-4 py-3.5 text-sm" required>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold tracking-wider text-neutral-400 uppercase mb-2">Your Message</label>
+                    <textarea rows="5" placeholder="Write your message here..." class="w-full input-premium rounded-xl px-4 py-3.5 text-sm resize-none" required></textarea>
+                </div>
+                <button type="submit" class="btn-premium-move bg-[#D4AF37] text-black font-bold py-4 rounded-full text-sm cursor-pointer shadow-lg">Send Message</button>
+            </form>
         </div>
-    </section>
+    </main>
     <footer class="premium-nav px-6 py-6 text-center text-xs text-neutral-500">&copy; 2026 Kumora Holly Click.</footer>
 </body>
 </html>
