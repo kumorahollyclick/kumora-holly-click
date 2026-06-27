@@ -3,160 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Reviews | KUMORA HOLLY CLICK</title>
-    <meta name="description" content="In-depth, honest, and expert analyses of the finest smart home and minimalist kitchen gadgets.">
-    
+    <title>KUMORA HOLLY CLICK | Premium Smart Home</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;650;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;650;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
-        :root {
-            --color-bg: #0A0A0B;
-            --color-card: #121214;
-            --color-accent: #D4AF37;
-            --color-accent-hover: #F3E5AB;
-            --color-text-primary: #F5F5F7;
-            --color-text-secondary: #86868B;
-        }
-
-        body {
-            background-color: var(--color-bg);
-            color: var(--color-text-primary);
-            font-family: 'Urbanist', sans-serif;
-            letter-spacing: -0.01em;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .premium-nav {
-            background: rgba(10, 10, 11, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-        }
-
-        .premium-product-card {
-            background: linear-gradient(135deg, rgba(18, 18, 20, 0.9) 0%, rgba(13, 13, 15, 0.95) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .premium-product-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.02), transparent 50%);
-            pointer-events: none;
-        }
-        .premium-product-card:hover {
-            border-color: rgba(212, 175, 55, 0.3);
-            transform: translateY(-6px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
-        }
-
-        /* 👑 AMAZON BUTTON WITH SMOOTH LIFT EFFECT */
-        .btn-premium-primary {
-            background: var(--color-accent);
-            color: #000000;
-            font-weight: 650;
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .btn-premium-primary:hover {
-            background: var(--color-accent-hover);
-            transform: translateY(-6px) scale(1.02); /* کلاسی موومنٹ اوپر کی طرف */
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
-        }
+        body { background-color: #0A0A0B; color: #F5F5F7; font-family: 'Urbanist', sans-serif; -webkit-font-smoothing: antialiased; }
+        .premium-nav { background: rgba(10, 10, 11, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.04); }
+        .luxury-card { background: linear-gradient(180deg, rgba(20, 20, 22, 0.8) 0%, rgba(18, 18, 20, 0.9) 100%); border: 1px solid rgba(255, 255, 255, 0.03); transition: all 0.4s ease; }
+        .luxury-card:hover { transform: translateY(-5px); }
+        /* 👑 SMOOTH LIFT EFFECT FOR BUTTONS */
+        .btn-premium-move { display: inline-flex; align-items: center; justify-content: center; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease; }
+        .btn-premium-move:hover { transform: translateY(-6px) scale(1.03) !important; box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
-
     <header class="sticky top-0 z-50 premium-nav px-6 py-4">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex justify-between items-center w-full md:w-auto">
-                <a href="index.html" class="text-xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-                    KUMORA <span class="text-[#D4AF37]">HOLLY CLICK</span>
-                </a>
-                <button id="menu-toggle" class="md:hidden text-neutral-400 hover:text-white focus:outline-none text-xl p-1">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row gap-6 md:gap-8 text-[14px] font-medium text-neutral-400 w-full md:w-auto text-center md:text-left pt-2 md:pt-0">
-                <a href="index.html" class="hover:text-white py-1 md:py-0 transition">Home</a>
-                <a href="blog.html" class="hover:text-white py-1 md:py-0 transition">Blog</a>
-                <a href="reviews.html" class="text-[#D4AF37] py-1 md:py-0 transition">Product Reviews</a>
-                <a href="about.html" class="hover:text-white py-1 md:py-0 transition">About</a>
-                <a href="contact.html" class="hover:text-white py-1 md:py-0 transition">Contact</a>
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-extrabold tracking-tight">KUMORA <span class="text-[#D4AF37]">HOLLY CLICK</span></a>
+            <nav class="flex gap-6 text-[14px] font-medium text-neutral-400">
+                <a href="index.html" class="text-[#D4AF37]">Home</a>
+                <a href="blog.html" class="hover:text-white transition">Blog</a>
+                <a href="reviews.html" class="hover:text-white transition">Product Reviews</a>
+                <a href="about.html" class="hover:text-white transition">About</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
             </nav>
         </div>
     </header>
-
-    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <p class="text-xs font-semibold tracking-widest text-[#D4AF37] uppercase mb-3">Expert Analysis</p>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Product Reviews</h1>
-        <p class="text-[16px] md:text-[18px] text-neutral-400 font-light leading-relaxed">
-            In-depth, completely unbiased assessments of modern tools designed to elevate your kitchen architecture and lifestyle efficiency.
-        </p>
+    <section class="max-w-5xl mx-auto px-6 py-24 text-center flex flex-col items-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Elevating Your Daily Living.</h1>
+        <p class="text-neutral-400 max-w-2xl mb-10 font-light">Meticulously curated smart kitchen tech and refined home organization concepts.</p>
+        <div class="flex gap-4">
+            <a href="reviews.html" class="btn-premium-move bg-[#D4AF37] text-black font-semibold px-8 py-3.5 rounded-full text-sm">Explore Premium Reviews</a>
+            <a href="https://kumorahollyclick.blogspot.com" target="_blank" class="btn-premium-move bg-white/5 border border-white/10 text-white px-8 py-3.5 rounded-full text-sm">Read Our Journal</a>
+        </div>
     </section>
-
-    <main class="max-w-6xl mx-auto px-6 py-8 w-full flex-grow">
-        <div class="grid grid-cols-1 gap-10">
-            
-            <div class="premium-product-card rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center">
-                <div class="w-full md:w-1/3 aspect-square bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-2xl flex items-center justify-center border border-white/[0.04] p-8 shadow-inner">
-                    <i class="fas fa-blender text-6xl text-[#D4AF37] filter drop-shadow-[0_10px_15px_rgba(212,175,55,0.15)]"></i>
-                </div>
-                <div class="w-full md:w-2/3 flex flex-col items-center md:items-start text-center md:text-left">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded-md border border-[#D4AF37]/20">Kitchen Luxuries</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold mt-4 mb-3 text-white tracking-tight leading-tight">Electric Milk Frother & Coffee Whisk</h2>
-                    <div class="flex items-center gap-1.5 text-amber-400 mb-4 text-xs bg-white/[0.02] px-3 py-1.5 rounded-full border border-white/[0.04]">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                        <span class="text-neutral-400 ml-1.5 font-medium">4.8 (Verified Amazon Rating)</span>
-                    </div>
-                    <p class="text-neutral-400 mb-6 text-[15px] font-light leading-relaxed">
-                        Engineered to create rich, micro-foam density within seconds. Elevate your morning lattes, matchas, or premium chocolates with an ultra-quiet motor and a beautiful minimalist footprint.
-                    </p>
-                    <a href="#" class="inline-flex items-center gap-3 btn-premium-primary text-[13px] px-8 py-3.5 rounded-full shadow-lg w-full sm:w-auto justify-center">
-                        <i class="fab fa-amazon text-sm"></i> View Product On Amazon
-                    </a>
-                </div>
-            </div>
-
-            <div class="premium-product-card rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center opacity-75">
-                <div class="w-full md:w-1/3 aspect-square bg-gradient-to-b from-neutral-900 to-neutral-950 rounded-2xl flex items-center justify-center border border-white/[0.04] p-8 shadow-inner">
-                    <i class="fas fa-coffee text-6xl text-neutral-600"></i>
-                </div>
-                <div class="w-full md:w-2/3 flex flex-col items-center md:items-start text-center md:text-left">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-500 bg-neutral-900 px-3 py-1 rounded-md">Smart Appliances</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold mt-4 mb-3 text-neutral-400 tracking-tight leading-tight">Minimalist Precision Coffee Scaler</h2>
-                    <div class="text-neutral-600 mb-4 text-xs">
-                        Coming Soon to Kumora Selection
-                    </div>
-                    <p class="text-neutral-500 mb-6 text-[15px] font-light leading-relaxed">
-                        An elegant digital scale featuring automated timers and precision weight measurements down to 0.1g, perfect for artisan coffee brewing setups.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <footer class="premium-nav px-6 py-8 mt-20 w-full">
-        <div class="max-w-6xl mx-auto text-center flex flex-col items-center gap-4">
-            <p class="text-xs text-neutral-500">&copy; 2026 Kumora Holly Click. Built for Excellence.</p>
-        </div>
-    </footer>
-
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('hidden');
-            navMenu.classList.toggle('flex');
-            navMenu.classList.toggle('flex-col');
-        });
-    </script>
+    <footer class="premium-nav px-6 py-6 text-center text-xs text-neutral-500">&copy; 2026 Kumora Holly Click.</footer>
 </body>
 </html>
