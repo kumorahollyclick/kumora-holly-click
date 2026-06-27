@@ -15,6 +15,7 @@
             color: #F5F5F4;
             font-family: 'Urbanist', sans-serif;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
         .font-serif {
             font-family: 'Cormorant Garamond', serif;
@@ -50,12 +51,12 @@
             <a href="#" class="text-xl font-bold tracking-widest text-[#F5F5F4] font-serif">
                 VELVET <span class="text-[#D4AF37] font-light">BREW</span>
             </a>
-            <nav class="hidden md:flex gap-8 text-[13px] font-medium tracking-widest uppercase text-stone-400">
-                <a href="#" class="text-[#D4AF37]">Home</a>
-                <a href="#story" class="hover:text-[#F5F5F4] transition duration-300">Our Story</a>
-                <a href="#menu" class="hover:text-[#F5F5F4] transition duration-300">The Menu</a>
-                <a href="#gallery" class="hover:text-[#F5F5F4] transition duration-300">Gallery</a>
-                <a href="#contact" class="hover:text-[#F5F5F4] transition duration-300">Contact</a>
+            <nav id="nav-links" class="hidden md:flex gap-8 text-[13px] font-medium tracking-widest uppercase">
+                <a href="#" class="nav-item text-[#D4AF37] transition duration-300" data-section="home">Home</a>
+                <a href="#story" class="nav-item text-stone-400 hover:text-[#F5F5F4] transition duration-300" data-section="story">Our Story</a>
+                <a href="#menu" class="nav-item text-stone-400 hover:text-[#F5F5F4] transition duration-300" data-section="menu">The Menu</a>
+                <a href="#gallery" class="nav-item text-stone-400 hover:text-[#F5F5F4] transition duration-300" data-section="gallery">Gallery</a>
+                <a href="#contact" class="nav-item text-stone-400 hover:text-[#F5F5F4] transition duration-300" data-section="contact">Contact</a>
             </nav>
             <div>
                 <a href="#contact" class="text-[12px] font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-500 border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B0A09]">
@@ -65,16 +66,16 @@
         </div>
     </header>
 
-    <!-- 👑 STEP 8: HERO SECTION -->
-    <section class="relative min-h-[90vh] flex items-center justify-center px-6 py-12 overflow-hidden">
+    <!-- 👑 HERO SECTION -->
+    <section id="home" class="relative min-h-[90vh] flex items-center justify-center px-6 py-12 overflow-hidden section-block">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
             <div class="flex flex-col gap-6 text-left max-w-xl">
                 <span class="text-[12px] font-semibold tracking-[0.25em] uppercase text-[#D4AF37]">The Ultimate Coffee Experience</span>
                 <h1 class="text-5xl md:text-7xl font-bold font-serif leading-[1.1] text-white"> Crafted for the <span class="italic font-normal text-[#D4AF37]">Discerning</span> Palette. </h1>
                 <p class="text-stone-400 text-sm md:text-base leading-relaxed font-light"> Experience rich, freshly roasted single-origin espresso meticulously brewed to absolute perfection. Every single cup is an artful ritual tailored for your morning luxury. </p> <div class="flex flex-col sm:flex-row gap-4 mt-4"> <a href="#menu" class="bg-[#D4AF37] text-[#0B0A09] text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-full text-center hover:transform hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-[#D4AF37]/10"> Explore Our Blends </a> <a href="#story" class="border border-stone-700 text-white text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-full text-center hover:bg-stone-900 transition-all duration-300"> Our Story </a> </div> </div> <div class="relative flex justify-center items-center"> <div class="absolute w-72 h-72 rounded-full bg-[#D4AF37]/5 blur-[80px]"></div> <div class="relative z-10 p-4"> <div class="absolute inset-0 flex justify-center items-center pointer-events-none"> <div class="w-20 h-32 bg-gradient-to-t from-white/10 to-transparent rounded-full steam-effect mb-40"></div> </div> <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Velvet Brew" class="w-[380px] h-[480px] object-cover rounded-[2rem] shadow-2xl border border-white/[0.03] grayscale hover:grayscale-0 transition-all duration-700"> </div> </div> </div> </section>
 
-    <!-- 🌟 STEP 9: FEATURES SECTION (THE CORE RITUAL) -->
-    <section id="story" class="py-24 px-6 relative border-t border-white/[0.02]">
+    <!-- 🌟 FEATURES SECTION (THE CORE RITUAL) -->
+    <section id="story" class="py-24 px-6 relative border-t border-white/[0.02] section-block">
         <div class="max-w-7xl mx-auto text-center">
             <div class="flex flex-col items-center gap-3 mb-16">
                 <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Why Velvet Brew</span>
@@ -91,8 +92,8 @@
         </div>
     </section>
 
-    <!-- 💎 STEP 10: SERVICES / PRODUCT MENU SECTION -->
-    <section id="menu" class="py-24 px-6 relative bg-[#12100E]/40 border-t border-white/[0.01]">
+    <!-- 💎 SERVICES / PRODUCT MENU SECTION -->
+    <section id="menu" class="py-24 px-6 relative bg-[#12100E]/40 border-t border-white/[0.01] section-block">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col items-center gap-3 text-center mb-16">
                 <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Curated House Blends</span>
@@ -134,7 +135,7 @@
         </div>
     </section>
 
-    <!-- 👥 STEP 11: TESTIMONIALS SECTION -->
+    <!-- 👥 TESTIMONIALS SECTION -->
     <section id="testimonials" class="py-24 px-6 relative border-t border-white/[0.01]">
         <div class="max-w-5xl mx-auto text-center">
             <div class="flex flex-col items-center gap-3 mb-16">
@@ -148,8 +149,8 @@
         </div>
     </section>
 
-    <!-- 🖼️ STEP 12: GALLERY SECTION -->
-    <section id="gallery" class="py-24 px-6 relative bg-[#12100E]/20 border-t border-white/[0.01]">
+    <!-- 🖼️ GALLERY SECTION -->
+    <section id="gallery" class="py-24 px-6 relative bg-[#12100E]/20 border-t border-white/[0.01] section-block">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col items-center gap-3 text-center mb-16">
                 <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Atmosphere</span>
@@ -173,8 +174,8 @@
         </div>
     </section>
 
-    <!-- ✉️ STEP 13: CONTACT & RESERVATION SECTION -->
-    <section id="contact" class="py-24 px-6 relative border-t border-white/[0.01]">
+    <!-- ✉️ CONTACT & RESERVATION SECTION -->
+    <section id="contact" class="py-24 px-6 relative border-t border-white/[0.01] section-block">
         <div class="max-w-4xl mx-auto">
             <div class="flex flex-col items-center gap-3 text-center mb-16">
                 <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Reservations</span>
@@ -215,7 +216,7 @@
         </div>
     </section>
 
-    <!-- 🌟 STEP 14: LUXURY FOOTER SECTION -->
+    <!-- 🌟 LUXURY FOOTER SECTION -->
     <footer class="py-12 px-6 border-t border-white/[0.03]" style="background-color: #080706;">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
@@ -238,6 +239,34 @@
             </div>
         </div>
     </footer>
+
+    <!-- 🧠 AUTOMATIC MENU INTERACTIVE HIGHLIGHT SCRIPT -->
+    <script>
+        const sections = document.querySelectorAll('.section-block');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        window.addEventListener('scroll', () => {
+            let currentSection = 'home';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 160)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                if (item.getAttribute('data-section') === currentSection) {
+                    item.classList.remove('text-stone-400');
+                    item.classList.add('text-[#D4AF37]');
+                } else {
+                    item.classList.remove('text-[#D4AF37]');
+                    item.classList.add('text-stone-400');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
