@@ -17,7 +17,6 @@
     </style>
 </head>
 <body>
-
     <!-- Navbar -->
     <nav class="nav-blur sticky top-0 z-50 border-b border-white/[0.05]">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
@@ -40,21 +39,17 @@
     </section>
 
     <!-- Features -->
-    <!-- Features -->
     <section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-8">
-        <!-- Rare Origins -->
         <div class="p-8 rounded-3xl luxury-card text-center flex flex-col items-center">
             <h3 class="text-[#D4AF37] font-serif text-2xl mb-2">Rare Origins</h3>
             <p class="text-stone-400 text-sm mb-6 flex-grow">Top 1% Arabica beans from high-altitude micro-lots.</p>
             <button onclick="openModal('Rare Origins', 'We source our beans from the world\'s most exclusive high-altitude micro-lots, ensuring only the top 1% of Arabica beans are selected for our roasts.')" class="text-[10px] uppercase tracking-widest border-b border-[#D4AF37] text-[#D4AF37] hover:text-white transition-all">Learn More</button>
         </div>
-        <!-- Artisanal Roast -->
         <div class="p-8 rounded-3xl luxury-card text-center flex flex-col items-center">
             <h3 class="text-[#D4AF37] font-serif text-2xl mb-2">Artisanal Roast</h3>
             <p class="text-stone-400 text-sm mb-6 flex-grow">Small batch precision for perfect flavor profiles.</p>
             <button onclick="openModal('Artisanal Roast', 'Our master roasters use mathematical precision to unlock deep, complex flavor profiles in every small batch.')" class="text-[10px] uppercase tracking-widest border-b border-[#D4AF37] text-[#D4AF37] hover:text-white transition-all">Learn More</button>
         </div>
-        <!-- Velvet Texture -->
         <div class="p-8 rounded-3xl luxury-card text-center flex flex-col items-center">
             <h3 class="text-[#D4AF37] font-serif text-2xl mb-2">Velvet Texture</h3>
             <p class="text-stone-400 text-sm mb-6 flex-grow">Signature technique for a smooth, rich body.</p>
@@ -72,7 +67,7 @@
         </div>
     </section>
 
-    <!-- Coffee Journey (Clickable Modal Section) -->
+    <!-- Coffee Journey -->
     <section id="journey" class="max-w-3xl mx-auto px-6 py-24 border-t border-white/[0.05]">
         <h2 class="text-4xl font-serif text-white text-center mb-16">The Coffee Journey</h2>
         <div class="relative border-l border-stone-800 ml-4 md:ml-0 space-y-12">
@@ -91,40 +86,27 @@
         </div>
     </div>
 
-    <!-- Gallery --><!-- Sub-Gallery (3 Vertical Small Images) -->
+    <!-- Sub-Gallery -->
     <section class="max-w-xl mx-auto px-6 py-12">
         <div class="grid grid-cols-1 gap-4">
-            <div class="h-40 rounded-2xl overflow-hidden hover:opacity-80 transition-opacity">
-                <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
-            </div>
-            <div class="h-40 rounded-2xl overflow-hidden hover:opacity-80 transition-opacity">
-                <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
-            </div>
-            <div class="h-40 rounded-2xl overflow-hidden hover:opacity-80 transition-opacity">
-                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
-            </div>
+            <div class="h-40 rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover"></div>
+            <div class="h-40 rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover"></div>
+            <div class="h-40 rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover"></div>
         </div>
     </section>
-    <!-- Gallery -->
-<section class="max-w-7xl mx-auto px-6 py-24">
-    <h2 class="text-4xl font-serif text-white text-center mb-16">The Velvet Gallery</h2>
-    <!-- یہاں ہم نے grid-cols-1 md:grid-cols-3 استعمال کیا ہے تاکہ سائز برابر رہے -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="h-80 rounded-3xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+
+    <!-- Main Gallery -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-serif text-white text-center mb-16">The Velvet Gallery</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="h-80 rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover"></div>
+            <div class="h-80 rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover"></div>
+            <div class="h-80 rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover"></div>
         </div>
-        <div class="h-80 rounded-3xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-        </div>
-        <div class="h-80 rounded-3xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-        </div>
-    </div>
-</section>
+    </section>
+
     <!-- Footer -->
-    <footer class="py-12 border-t border-white/[0.05] text-center text-stone-500 text-xs uppercase tracking-widest">
-        &copy; 2026 Velvet Brew. All Rights Reserved.
-    </footer>
+    <footer class="py-12 border-t border-white/[0.05] text-center text-stone-500 text-xs uppercase tracking-widest"> &copy; 2026 Velvet Brew. All Rights Reserved. </footer>
 
     <script>
         function openModal(title, body) {
