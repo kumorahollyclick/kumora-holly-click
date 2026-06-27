@@ -10,7 +10,11 @@
         body { background-color: #0B0A09; color: #F5F5F4; font-family: 'Urbanist', sans-serif; }
         h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
         .nav-blur { background: rgba(11, 10, 9, 0.8); backdrop-filter: blur(12px); }
-        .luxury-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.1); }
+        .luxury-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.1); transition: all 0.3s ease; }
+        .luxury-card:hover { border-color: #D4AF37; }
+        nav a:hover { color: #D4AF37 !important; transition: all 0.3s ease; }
+        .btn-gold { background: #D4AF37; color: #0B0A09; transition: all 0.3s ease; }
+        .btn-gold:hover { background: #b89630; transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -31,7 +35,7 @@
         <div class="space-y-8">
             <h1 class="text-6xl md:text-8xl font-serif text-white leading-[0.9]">Crafted for the <span class="italic text-[#D4AF37]">Discerning</span> Palette.</h1>
             <p class="text-stone-400 text-lg">Experience rich, single-origin espresso meticulously brewed to absolute perfection.</p>
-            <a href="#menu" class="inline-block bg-[#D4AF37] text-[#0B0A09] px-10 py-4 rounded-full font-bold tracking-widest uppercase text-xs">Explore Blends</a>
+            <a href="#menu" class="inline-block btn-gold px-10 py-4 rounded-full font-bold tracking-widest uppercase text-xs">Explore Blends</a>
         </div>
         <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800" class="rounded-[2rem] w-full h-[500px] object-cover">
     </section>
@@ -47,41 +51,21 @@
     <section id="menu" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/[0.05]">
         <h2 class="text-5xl font-serif text-white text-center mb-16">Featured Collection</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="luxury-card rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover"><div class="p-8"><h3 class="text-xl text-white font-serif mb-2">Gold Velvet</h3><span class="text-[#D4AF37] font-bold">$12.00</span></div></div>
-            <div class="luxury-card rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover"><div class="p-8"><h3 class="text-xl text-white font-serif mb-2">Obsidian Dark</h3><span class="text-[#D4AF37] font-bold">$14.50</span></div></div>
-            <div class="luxury-card rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover"><div class="p-8"><h3 class="text-xl text-white font-serif mb-2">Silk Cream</h3><span class="text-[#D4AF37] font-bold">$16.00</span></div></div>
+            <div class="luxury-card rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover"><div class="p-8"><h3 class="text-xl text-white font-serif mb-2">Gold Velvet</h3><span class="text-[#D4AF37] font-bold block mb-4">$12.00</span><button class="w-full border border-white/20 py-2 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all uppercase text-[10px] tracking-widest">Buy Now</button></div></div>
+            <div class="luxury-card rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover"><div class="p-8"><h3 class="text-xl text-white font-serif mb-2">Obsidian Dark</h3><span class="text-[#D4AF37] font-bold block mb-4">$14.50</span><button class="w-full border border-white/20 py-2 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all uppercase text-[10px] tracking-widest">Buy Now</button></div></div>
+            <div class="luxury-card rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover"><div class="p-8"><h3 class="text-xl text-white font-serif mb-2">Silk Cream</h3><span class="text-[#D4AF37] font-bold block mb-4">$16.00</span><button class="w-full border border-white/20 py-2 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all uppercase text-[10px] tracking-widest">Buy Now</button></div></div>
         </div>
     </section>
 
-    <!-- Improved Coffee Experience Timeline -->
+    <!-- Coffee Journey -->
     <section class="max-w-3xl mx-auto px-6 py-24 border-t border-white/[0.05]">
         <h2 class="text-4xl font-serif text-white text-center mb-16">The Coffee Journey</h2>
         <div class="relative border-l border-stone-800 ml-4 md:ml-0 space-y-12">
-            <div class="relative pl-8 group hover:pl-10 transition-all duration-300">
-                <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div>
-                <h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">01</h3>
-                <p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Ethical Farm Sourcing</p>
-            </div>
-            <div class="relative pl-8 group hover:pl-10 transition-all duration-300">
-                <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div>
-                <h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">02</h3>
-                <p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Precision Selection</p>
-            </div>
-            <div class="relative pl-8 group hover:pl-10 transition-all duration-300">
-                <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div>
-                <h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">03</h3>
-                <p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Artisanal Roasting</p>
-            </div>
-            <div class="relative pl-8 group hover:pl-10 transition-all duration-300">
-                <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div>
-                <h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">04</h3>
-                <p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Masterful Brewing</p>
-            </div>
-            <div class="relative pl-8 group hover:pl-10 transition-all duration-300">
-                <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div>
-                <h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">05</h3>
-                <p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Served Perfection</p>
-            </div>
+            <div class="relative pl-8 group hover:pl-10 transition-all duration-300"><div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div><h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">01</h3><p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Ethical Farm Sourcing</p></div>
+            <div class="relative pl-8 group hover:pl-10 transition-all duration-300"><div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div><h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">02</h3><p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Precision Selection</p></div>
+            <div class="relative pl-8 group hover:pl-10 transition-all duration-300"><div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div><h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">03</h3><p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Artisanal Roasting</p></div>
+            <div class="relative pl-8 group hover:pl-10 transition-all duration-300"><div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div><h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">04</h3><p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Masterful Brewing</p></div>
+            <div class="relative pl-8 group hover:pl-10 transition-all duration-300"><div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37]"></div><h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em]">05</h3><p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Served Perfection</p></div>
         </div>
     </section>
 
