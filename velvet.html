@@ -15,12 +15,10 @@
             color: #F5F5F4;
             font-family: 'Urbanist', sans-serif;
             overflow-x: hidden;
-            scroll-behavior: smooth;
         }
         .font-serif {
             font-family: 'Cormorant Garamond', serif;
         }
-        /* ☕ گرم دھوئیں کا اسموتھ اینیمیشن اثر */
         @keyframes steam {
             0% { transform: translateY(0) scale(0.9); opacity: 0.2; filter: blur(8px); }
             50% { transform: translateY(-10px) scale(1.05); opacity: 0.4; filter: blur(4px); }
@@ -29,258 +27,67 @@
         .steam-effect {
             animation: steam 4s ease-in-out infinite;
         }
-        /* ✨ پریمیم کارڈز کا گلاسمورفزم ایفیکٹ */
-        .luxury-card {
-            background: linear-gradient(180deg, rgba(28, 25, 23, 0.4) 0%, rgba(20, 18, 17, 0.6) 100%);
-            border: 1px solid rgba(212, 175, 55, 0.03);
-            backdrop-filter: blur(12px);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .luxury-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(212, 175, 55, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
     </style>
 </head>
 <body>
 
-    <!-- 🌐 ULTRA-PREMIUM NAVIGATION NAVBAR -->
+    <!-- 🌐 NAVIGATION NAVBAR -->
     <header class="sticky top-0 z-50 px-6 py-4" style="background: rgba(11, 10, 9, 0.75); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(212, 175, 55, 0.04);">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-widest text-[#F5F5F4] font-serif">
+            <a href="index.html" class="text-xl font-bold tracking-widest text-[#F5F5F4] font-serif">
                 VELVET <span class="text-[#D4AF37] font-light">BREW</span>
             </a>
-            <nav id="nav-links" class="hidden md:flex gap-8 text-[13px] font-medium tracking-widest uppercase">
-                <a href="#" class="nav-item text-[#D4AF37] transition duration-300" data-section="home">Home</a>
-                <a href="#story" class="nav-item text-stone-400 hover:text-[#F5F5F4] transition duration-300" data-section="story">Our Story</a>
-                <a href="#menu" class="nav-item text-stone-400 hover:text-[#F5F5F4] transition duration-300" data-section="menu">The Menu</a>
-                <a href="#gallery" class="nav-item text-stone-400 hover:text-[#F5F5F4] transition duration-300" data-section="gallery">Gallery</a>
-                <a href="#contact" class="nav-item text-stone-400 hover:text-[#F5F5F4] transition duration-300" data-section="contact">Contact</a>
+            <nav class="hidden md:flex gap-8 text-[13px] font-medium tracking-widest uppercase">
+                <a href="index.html" class="text-[#D4AF37] transition duration-300">Home</a>
+                <a href="story.html" class="text-stone-400 hover:text-[#F5F5F4] transition duration-300">Our Story</a>
+                <a href="menu.html" class="text-stone-400 hover:text-[#F5F5F4] transition duration-300">The Menu</a>
+                <a href="gallery.html" class="text-stone-400 hover:text-[#F5F5F4] transition duration-300">Gallery</a>
             </nav>
             <div>
-                <a href="#contact" class="text-[12px] font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-500 border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B0A09]">
+                <a href="menu.html" class="text-[12px] font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-500 border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B0A09]">
                     Book A Table
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- 👑 HERO SECTION -->
-    <section id="home" class="relative min-h-[90vh] flex items-center justify-center px-6 py-12 overflow-hidden section-block">
+    <!-- 👑 HERO SECTION (HOME) -->
+    <section class="relative min-h-[85vh] flex items-center justify-center px-6 py-12 overflow-hidden">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
             <div class="flex flex-col gap-6 text-left max-w-xl">
                 <span class="text-[12px] font-semibold tracking-[0.25em] uppercase text-[#D4AF37]">The Ultimate Coffee Experience</span>
                 <h1 class="text-5xl md:text-7xl font-bold font-serif leading-[1.1] text-white"> Crafted for the <span class="italic font-normal text-[#D4AF37]">Discerning</span> Palette. </h1>
-                <p class="text-stone-400 text-sm md:text-base leading-relaxed font-light"> Experience rich, freshly roasted single-origin espresso meticulously brewed to absolute perfection. Every single cup is an artful ritual tailored for your morning luxury. </p> <div class="flex flex-col sm:flex-row gap-4 mt-4"> <a href="#menu" class="bg-[#D4AF37] text-[#0B0A09] text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-full text-center hover:transform hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-[#D4AF37]/10"> Explore Our Blends </a> <a href="#story" class="border border-stone-700 text-white text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-full text-center hover:bg-stone-900 transition-all duration-300"> Our Story </a> </div> </div> <div class="relative flex justify-center items-center"> <div class="absolute w-72 h-72 rounded-full bg-[#D4AF37]/5 blur-[80px]"></div> <div class="relative z-10 p-4"> <div class="absolute inset-0 flex justify-center items-center pointer-events-none"> <div class="w-20 h-32 bg-gradient-to-t from-white/10 to-transparent rounded-full steam-effect mb-40"></div> </div> <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Velvet Brew" class="w-[380px] h-[480px] object-cover rounded-[2rem] shadow-2xl border border-white/[0.03] grayscale hover:grayscale-0 transition-all duration-700"> </div> </div> </div> </section>
-
-    <!-- 🌟 FEATURES SECTION (THE CORE RITUAL) -->
-    <section id="story" class="py-24 px-6 relative border-t border-white/[0.02] section-block">
-        <div class="max-w-7xl mx-auto text-center">
-            <div class="flex flex-col items-center gap-3 mb-16">
-                <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Why Velvet Brew</span>
-                <h2 class="text-3xl md:text-5xl font-bold font-serif text-white">The Pillars of Our Craft</h2>
-                <div class="w-12 h-[1px] bg-[#D4AF37]/40 mt-2"></div>
+                <p class="text-stone-400 text-sm md:text-base leading-relaxed font-light"> Experience rich, freshly roasted single-origin espresso meticulously brewed to absolute perfection. Every single cup is an artful ritual tailored for your morning luxury. </p>
+                <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                    <a href="menu.html" class="bg-[#D4AF37] text-[#0B0A09] text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-full text-center hover:transform hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-[#D4AF37]/10"> Explore Our Blends </a>
+                    <a href="story.html" class="border border-stone-700 text-white text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-full text-center hover:bg-stone-900 transition-all duration-300"> Our Story </a>
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="luxury-card rounded-3xl p-8 text-left flex flex-col gap-5">
-                    <div class="text-[#D4AF37] text-2xl font-light">01 /</div>
-                    <h3 class="text-xl font-medium text-white tracking-wide">Rare Single-Origins</h3>
-                    <p class="text-stone-400 text-sm leading-relaxed font-light"> We source exclusively from micro-lot farms globally, picking only the top 1% of Arabica beans that pass our taste test. </p> </div> <div class="luxury-card rounded-3xl p-8 text-left flex flex-col gap-5"> <div class="text-[#D4AF37] text-2xl font-light">02 /</div> <h3 class="text-xl font-medium text-white tracking-wide">The Artisanal Roast</h3> <p class="text-stone-400 text-sm leading-relaxed font-light"> Roasted in small batches using state-of-the-art tech balanced with human intuition to unlock the absolute sweetest flavor notes possible. </p> </div> <div class="luxury-card rounded-3xl p-8 text-left flex flex-col gap-5"> <div class="text-[#D4AF37] text-2xl font-light">03 /</div> <h3 class="text-xl font-medium text-white tracking-wide">Velvet Precision</h3> <p class="text-stone-400 text-sm leading-relaxed font-light"> Every temperature degree, every second of extraction, and every milligram of water is calculated to create a velvety texture that lingers elegantly. </p> </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 💎 SERVICES / PRODUCT MENU SECTION -->
-    <section id="menu" class="py-24 px-6 relative bg-[#12100E]/40 border-t border-white/[0.01] section-block">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col items-center gap-3 text-center mb-16">
-                <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Curated House Blends</span>
-                <h2 class="text-3xl md:text-5xl font-bold font-serif text-white">Experience The Liquid Luxury</h2>
-                <div class="w-12 h-[1px] bg-[#D4AF37]/40 mt-2"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="luxury-card rounded-[2rem] overflow-hidden p-5 flex flex-col gap-5">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=400" alt="Gold Velvet Espresso" class="w-full h-56 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500">
-                    <div class="flex justify-between items-start mt-2">
-                        <div>
-                            <h3 class="text-lg font-medium text-white tracking-wide">Gold Velvet Espresso</h3>
-                            <p class="text-xs text-stone-500 mt-1 font-light tracking-wide">Notes of Honey, Citrus & Jasmine</p>
-                        </div>
-                        <span class="text-[#D4AF37] font-serif text-lg font-medium">$9.00</span>
+            <div class="relative flex justify-center items-center">
+                <div class="absolute w-72 h-72 rounded-full bg-[#D4AF37]/5 blur-[80px]"></div>
+                <div class="relative z-10 p-4">
+                    <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+                        <div class="w-20 h-32 bg-gradient-to-t from-white/10 to-transparent rounded-full steam-effect mb-40"></div>
                     </div>
-                </div>
-                <div class="luxury-card rounded-[2rem] overflow-hidden p-5 flex flex-col gap-5">
-                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=400" alt="Obsidian Dark Roast" class="w-full h-56 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500">
-                    <div class="flex justify-between items-start mt-2">
-                        <div>
-                            <h3 class="text-lg font-medium text-white tracking-wide">Obsidian Dark Roast</h3>
-                            <p class="text-xs text-stone-500 mt-1 font-light tracking-wide">Notes of Dark Chocolate & Roasted Almond</p>
-                        </div>
-                        <span class="text-[#D4AF37] font-serif text-lg font-medium">$11.50</span>
-                    </div>
-                </div>
-                <div class="luxury-card rounded-[2rem] overflow-hidden p-5 flex flex-col gap-5">
-                    <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&q=80&w=400" alt="The Silk Cream Latte" class="w-full h-56 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500">
-                    <div class="flex justify-between items-start mt-2">
-                        <div>
-                            <h3 class="text-lg font-medium text-white tracking-wide">The Silk Cream Latte</h3>
-                            <p class="text-xs text-stone-500 mt-1 font-light tracking-wide">Infused with Rare Madagascar Vanilla</p>
-                        </div>
-                        <span class="text-[#D4AF37] font-serif text-lg font-medium">$14.00</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Velvet Brew" class="w-[380px] h-[480px] object-cover rounded-[2rem] shadow-2xl border border-white/[0.03] grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 👥 TESTIMONIALS SECTION -->
-    <section id="testimonials" class="py-24 px-6 relative border-t border-white/[0.01]">
-        <div class="max-w-5xl mx-auto text-center">
-            <div class="flex flex-col items-center gap-3 mb-16">
-                <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Guest Reviews</span>
-                <h2 class="text-3xl md:text-5xl font-bold font-serif text-white">What Connoisseurs Say</h2>
-                <div class="w-12 h-[1px] bg-[#D4AF37]/40 mt-2"></div>
-            </div>
-            <div class="luxury-card rounded-[2.5rem] p-10 md:p-16 max-w-3xl mx-auto relative overflow-hidden">
-                <div class="absolute top-6 left-10 text-8xl font-serif text-stone-800/20 select-none">“</div>
-                <p class="text-xl md:text-2xl font-serif italic text-stone-200 leading-relaxed relative z-10"> "Velvet Brew completely redefined my relationship with coffee. The espresso has an unbelievable silky texture, and the taste notes are incredibly clear. It feels like Apple designed a coffee experience." </p> <div class="mt-8 flex flex-col items-center gap-1"> <span class="text-sm font-semibold tracking-widest uppercase text-[#D4AF37]">Marcus Vance</span> <span class="text-xs text-stone-500 tracking-wider uppercase font-light">New York City — Coffee Critic</span> </div> </div>
-        </div>
-    </section>
-
-    <!-- 🖼️ GALLERY SECTION -->
-    <section id="gallery" class="py-24 px-6 relative bg-[#12100E]/20 border-t border-white/[0.01] section-block">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col items-center gap-3 text-center mb-16">
-                <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Atmosphere</span>
-                <h2 class="text-3xl md:text-5xl font-bold font-serif text-white">Our Visual Sanctuary</h2>
-                <div class="w-12 h-[1px] bg-[#D4AF37]/40 mt-2"></div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="h-80 rounded-2xl overflow-hidden border border-white/[0.02] shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=400" alt="Gallery 1" class="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-700">
-                </div>
-                <div class="h-80 rounded-2xl overflow-hidden border border-white/[0.02] shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=400" alt="Gallery 2" class="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-700">
-                </div>
-                <div class="h-80 rounded-2xl overflow-hidden border border-white/[0.02] shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=400" alt="Gallery 3" class="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-700">
-                </div>
-                <div class="h-80 rounded-2xl overflow-hidden border border-white/[0.02] shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=400" alt="Gallery 4" class="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-700">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ✉️ CONTACT & RESERVATION SECTION -->
-    <section id="contact" class="py-24 px-6 relative border-t border-white/[0.01] section-block">
-        <div class="max-w-4xl mx-auto">
-            <div class="flex flex-col items-center gap-3 text-center mb-16">
-                <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37]">Reservations</span>
-                <h2 class="text-3xl md:text-5xl font-bold font-serif text-white">Secure Your Velvet Table</h2>
-                <div class="w-12 h-[1px] bg-[#D4AF37]/40 mt-2"></div>
-            </div>
-            <form class="luxury-card rounded-[2.5rem] p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="flex flex-col gap-2">
-                    <label class="text-[11px] font-medium uppercase tracking-widest text-stone-400">Full Name</label>
-                    <input type="text" placeholder="Marcus Vance" class="w-full bg-[#1C1917]/50 border border-white/[0.05] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#D4AF37]/40 transition duration-300">
-                </div>
-                <div class="flex flex-col gap-2">
-                    <label class="text-[11px] font-medium uppercase tracking-widest text-stone-400">Email Address</label>
-                    <input type="email" placeholder="marcus@example.com" class="w-full bg-[#1C1917]/50 border border-white/[0.05] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#D4AF37]/40 transition duration-300">
-                </div>
-                <div class="flex flex-col gap-2">
-                    <label class="text-[11px] font-medium uppercase tracking-widest text-stone-400">Guests Count</label>
-                    <select class="w-full bg-[#1C1917]/50 border border-white/[0.05] rounded-xl px-4 py-3 text-sm text-stone-400 focus:outline-none focus:border-[#D4AF37]/40 transition duration-300">
-                        <option>2 Persons</option>
-                        <option>4 Persons</option>
-                        <option>6+ Persons</option>
-                    </select>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <label class="text-[11px] font-medium uppercase tracking-widest text-stone-400">Date & Time</label>
-                    <input type="text" placeholder="October 24, 7:00 PM" class="w-full bg-[#1C1917]/50 border border-white/[0.05] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#D4AF37]/40 transition duration-300">
-                </div>
-                <div class="flex flex-col gap-2 md:col-span-2">
-                    <label class="text-[11px] font-medium uppercase tracking-widest text-stone-400">Special Preferences</label>
-                    <textarea rows="3" placeholder="Any dietary restrictions or window table request..." class="w-full bg-[#1C1917]/50 border border-white/[0.05] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#D4AF37]/40 transition duration-300"></textarea>
-                </div>
-                <div class="md:col-span-2 mt-2">
-                    <button type="submit" class="w-full bg-[#D4AF37] text-[#0B0A09] text-[13px] font-bold tracking-widest uppercase py-4 rounded-xl hover:bg-[#c4a030] transition duration-300">
-                        Request Reservation
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!-- 🌟 LUXURY FOOTER SECTION -->
+    <!-- 🌟 LUXURY FOOTER -->
     <footer class="py-12 px-6 border-t border-white/[0.03]" style="background-color: #080706;">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="text-center md:text-left">
-                <a href="#" class="text-lg font-bold tracking-widest text-[#F5F5F4] font-serif">
+                <a href="index.html" class="text-lg font-bold tracking-widest text-[#F5F5F4] font-serif">
                     VELVET <span class="text-[#D4AF37] font-light">BREW</span>
                 </a>
-                <p class="text-xs text-stone-500 mt-2 font-light tracking-wide">
-                    The Art of Slow Extraction & Liquid Luxury.
-                </p>
             </div>
-            
-            <div class="flex flex-col sm:flex-row gap-8 text-center text-xs tracking-widest text-stone-400 uppercase font-light">
-                <div>Mon - Fri: 7:00 AM - 9:00 PM</div>
-                <div class="hidden sm:block text-stone-700">|</div>
-                <div>Sat - Sun: 9:00 AM - 11:00 PM</div>
-            </div>
-
             <div class="text-xs text-stone-600 font-light tracking-wider">
                 &copy; 2026 Velvet Brew. All Rights Reserved.
             </div>
         </div>
     </footer>
-
-    <!-- 🧠 AUTOMATIC MENU INTERACTIVE HIGHLIGHT SCRIPT -->
-    <script>
-        const sections = document.querySelectorAll('.section-block');
-        const navItems = document.querySelectorAll('.nav-item');
-
-        // مینو کو ایکٹیو کرنے کا فنکشن
-        function activateMenu() {
-            let currentSection = 'home';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (window.scrollY >= (sectionTop - 280)) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navItems.forEach(item => {
-                if (item.getAttribute('data-section') === currentSection) {
-                    item.classList.remove('text-stone-400');
-                    item.classList.add('text-[#D4AF37]');
-                } else {
-                    item.classList.remove('text-[#D4AF37]');
-                    item.classList.add('text-stone-400');
-                }
-            });
-        }
-
-        // اسکرول کرنے پر مینو بدلنے کے لیے
-        window.addEventListener('scroll', activateMenu);
-
-        // مینو آئٹمز پر کلک کرنے پر بھی فوراً یلو کرنے کے لیے
-        navItems.forEach(item => {
-            item.addEventListener('click', (e) => {
-                navItems.forEach(nav => {
-                    nav.classList.remove('text-[#D4AF37]');
-                    nav.classList.add('text-stone-400');
-                });
-                item.classList.remove('text-stone-400');
-                item.classList.add('text-[#D4AF37]');
-            });
-        });
-    </script>
 
 </body>
 </html>
