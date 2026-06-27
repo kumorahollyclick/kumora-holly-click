@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velvet Brew | Artisanal Luxury Coffee</title>
-    <!-- CSS فائل لنک -->
+    
+    <!-- CSS فائل کا لنک -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Tailwind CDN -->
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Urbanist:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-[#0B0A09] text-[#F5F5F4]">
 
-    <!-- آپ کا HTML کوڈ یہاں رہے گا -->
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-[#0b0a09]/80 border-b border-[#D4AF37]/10 p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-widest text-[#D4AF37]">VELVET BREW</h1>
+            <div class="space-x-8 text-sm uppercase tracking-tighter">
+                <a href="#" class="hover:text-[#D4AF37] transition">Home</a>
+                <a href="#menu" class="hover:text-[#D4AF37] transition">Menu</a>
+                <a href="#journey" class="hover:text-[#D4AF37] transition">Journey</a>
+            </div>
+        </div>
+    </nav>
 
-    <!-- JS فائل لنک -->
+    <!-- Hero Section -->
+    <section class="h-screen flex items-center justify-center text-center">
+        <div>
+            <h2 class="text-6xl md:text-8xl font-serif mb-6">Crafted for the <br> Discerning Palette.</h2>
+            <p class="text-lg text-gray-400 mb-8">Experience the pinnacle of luxury coffee.</p>
+            <a href="#menu" class="bg-[#D4AF37] text-[#0B0A09] px-8 py-3 font-semibold rounded-md hover:bg-[#b89630] transition">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- JS فائل کا لنک -->
     <script src="js/main.js"></script>
 </body>
 </html>
