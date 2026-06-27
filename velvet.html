@@ -1,8 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=velvet.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Brew | Artisanal Luxury Coffee</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Urbanist:wght=300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { background-color: #0B0A09; color: #F5F5F4; font-family: 'Urbanist', sans-serif; scroll-behavior: smooth; }
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .luxury-card { background: linear-gradient(180deg, rgba(28, 25, 23, 0.4) 0%, rgba(20, 18, 17, 0.6) 100%); border: 1px solid rgba(212, 175, 55, 0.03); }
+    </style>
 </head>
 <body>
+
+    <!-- 🌐 NAVBAR -->
+    <header class="sticky top-0 z-50 px-6 py-4 bg-[#0B0A09]/80 backdrop-blur-md border-b border-white/[0.04]">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-widest text-[#F5F5F4] font-serif">VELVET <span class="text-[#D4AF37] font-light">BREW</span></a>
+            <nav class="flex gap-8 text-[12px] font-medium tracking-widest uppercase text-stone-400">
+                <a href="#" class="text-[#D4AF37]">Home</a>
+                <a href="#story">Our Story</a>
+                <a href="#menu">Menu</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 👑 HERO -->
+    <section class="py-24 px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+            <h1 class="text-5xl md:text-7xl font-bold font-serif text-white mb-6">Crafted for the <span class="italic text-[#D4AF37]">Discerning</span> Palette.</h1>
+            <p class="text-stone-400 text-lg mb-8 leading-relaxed">Experience rich, single-origin espresso meticulously brewed to absolute perfection. Luxury in every sip.</p>
+            <a href="#menu" class="bg-[#D4AF37] text-[#0B0A09] px-8 py-3 rounded-full font-bold tracking-widest uppercase text-sm">Explore Blends</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" class="rounded-3xl shadow-2xl">
+    </section>
+
+    <!-- 📜 STORY -->
+    <section id="story" class="py-24 px-6 border-t border-white/[0.05]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+            <div class="luxury-card p-8 rounded-3xl"><h3 class="text-[#D4AF37] mb-2 font-serif text-xl">Rare Origins</h3><p class="text-stone-400 text-sm">Top 1% Arabica beans.</p></div>
+            <div class="luxury-card p-8 rounded-3xl"><h3 class="text-[#D4AF37] mb-2 font-serif text-xl">Artisanal Roast</h3><p class="text-stone-400 text-sm">Small batch precision.</p></div>
+            <div class="luxury-card p-8 rounded-3xl"><h3 class="text-[#D4AF37] mb-2 font-serif text-xl">Velvet Texture</h3><p class="text-stone-400 text-sm">Calculated extraction.</p></div>
+        </div>
+    </section>
+
+    <!-- 💎 MENU -->
+    <section id="menu" class="py-24 px-6 border-t border-white/[0.05]">
+        <div class="max-w-7xl mx-auto text-center mb-16"><h2 class="text-4xl font-serif text-white">Liquid Luxury</h2></div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="luxury-card p-6 rounded-3xl"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=400" class="rounded-2xl mb-4"><h3 class="text-white font-medium">Gold Espresso</h3><span class="text-[#D4AF37]">$9.00</span></div>
+            <div class="luxury-card p-6 rounded-3xl"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=400" class="rounded-2xl mb-4"><h3 class="text-white font-medium">Dark Roast</h3><span class="text-[#D4AF37]">$11.50</span></div>
+            <div class="luxury-card p-6 rounded-3xl"><img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&q=80&w=400" class="rounded-2xl mb-4"><h3 class="text-white font-medium">Silk Latte</h3><span class="text-[#D4AF37]">$14.00</span></div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-stone-600 text-xs">VELVET BREW &copy; 2026.</footer>
 </body>
 </html>
