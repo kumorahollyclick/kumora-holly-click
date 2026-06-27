@@ -1,191 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velvet Brew | Artisanal Luxury Coffee</title>
+    <!-- CSS فائل لنک -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #0B0A09; color: #F5F5F4; font-family: 'Urbanist', sans-serif; }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
-        .nav-blur { background: rgba(11, 10, 9, 0.8); backdrop-filter: blur(12px); }
-        .luxury-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(212, 175, 55, 0.1); transition: all 0.3s ease; }
-        .luxury-card:hover { border-color: #D4AF37; }
-        .btn-gold { background: #D4AF37; color: #0B0A09; transition: all 0.3s ease; }
-        .btn-gold:hover { background: #b89630; transform: scale(1.05); }
-    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="nav-blur sticky top-0 z-50 border-b border-white/[0.05]">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold tracking-widest text-[#F5F5F4] font-serif">VELVET <span class="text-[#D4AF37] font-light">BREW</span></a>
-            <div class="hidden md:flex gap-10 text-[12px] uppercase tracking-[0.2em] text-stone-400 font-medium">
-                <a href="#">Home</a> <a href="#menu">Menu</a> <a href="#journey">Journey</a>
-            </div>
-            <a href="#" class="border border-[#D4AF37] text-[#D4AF37] px-6 py-2 rounded-full text-[12px] uppercase tracking-widest hover:bg-[#D4AF37] hover:text-[#0B0A09] transition-all">Reserve</a>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center">
-        <div class="space-y-8">
-            <h1 class="text-6xl md:text-8xl font-serif text-white leading-[0.9]">Crafted for the <span class="italic text-[#D4AF37]">Discerning</span> Palette.</h1>
-            <p class="text-stone-400 text-lg">Experience rich, single-origin espresso meticulously brewed to absolute perfection.</p>
-            <a href="#menu" class="inline-block btn-gold px-10 py-4 rounded-full font-bold tracking-widest uppercase text-xs">Explore Blends</a>
-   <!-- Hero Section (Purana wala - ise delete karen) -->
-<section class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center">
-    <div class="space-y-8">
-        <h1 class="text-6xl md:text-8xl font-serif text-white leading-[0.9]">Crafted for the <span class="italic text-[#D4AF37]">Discerning</span> Palette.</h1>
-        <p class="text-stone-400 text-lg">Experience rich, single-origin espresso meticulously brewed to absolute perfection.</p>
-        <a href="#menu" class="inline-block btn-gold px-10 py-4 rounded-full font-bold tracking-widest uppercase text-xs">Explore Blends</a>
-    </div>
-</section>
-        </div>
-        <div class="relative rounded-[2rem] overflow-hidden h-[400px] lg:h-[600px] shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-        </div>
-    </section>
-            <h3 class="text-[#D4AF37] font-serif text-2xl mb-2">Rare Origins</h3>
-            <p class="text-stone-400 text-sm mb-6 flex-grow">Top 1% Arabica beans from high-altitude micro-lots.</p>
-            <button onclick="openModal('Rare Origins', 'We source our beans from the world\'s most exclusive high-altitude micro-lots, ensuring only the top 1% of Arabica beans are selected for our roasts.')" class="text-[10px] uppercase tracking-widest border-b border-[#D4AF37] text-[#D4AF37] hover:text-white transition-all">Learn More</button>
-        </div>
-        <div class="p-8 rounded-3xl luxury-card text-center flex flex-col items-center">
-            <h3 class="text-[#D4AF37] font-serif text-2xl mb-2">Artisanal Roast</h3>
-            <p class="text-stone-400 text-sm mb-6 flex-grow">Small batch precision for perfect flavor profiles.</p>
-            <button onclick="openModal('Artisanal Roast', 'Our master roasters use mathematical precision to unlock deep, complex flavor profiles in every small batch.')" class="text-[10px] uppercase tracking-widest border-b border-[#D4AF37] text-[#D4AF37] hover:text-white transition-all">Learn More</button>
-        </div>
-        <div class="p-8 rounded-3xl luxury-card text-center flex flex-col items-center">
-            <h3 class="text-[#D4AF37] font-serif text-2xl mb-2">Velvet Texture</h3>
-            <p class="text-stone-400 text-sm mb-6 flex-grow">Signature technique for a smooth, rich body.</p>
-            <button onclick="openModal('Velvet Texture', 'Using our signature brewing technique, we achieve an unparalleled smooth and rich texture that defines the Velvet Brew experience.')" class="text-[10px] uppercase tracking-widest border-b border-[#D4AF37] text-[#D4AF37] hover:text-white transition-all">Learn More</button>
-        </div>
-    </section>
+    <!-- آپ کا HTML کوڈ یہاں رہے گا -->
 
-    <!-- Menu -->
-  <!-- Menu (Animated) -->
-    <section id="menu" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/[0.05]">
-        <h2 class="text-5xl font-serif text-white text-center mb-16">Featured Collection</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            
-            <!-- Card 1 -->
-            <div class="luxury-card rounded-3xl overflow-hidden group">
-                <div class="overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=400" 
-                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl text-white font-serif mb-2">Gold Velvet</h3>
-                    <span class="text-[#D4AF37] font-bold block mb-4">$12.00</span>
-                    <button class="w-full border border-white/20 py-2 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all uppercase text-[10px] tracking-widest">Buy Now</button>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="luxury-card rounded-3xl overflow-hidden group">
-                <div class="overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=400" 
-                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl text-white font-serif mb-2">Obsidian Dark</h3>
-                    <span class="text-[#D4AF37] font-bold block mb-4">$14.50</span>
-                    <button class="w-full border border-white/20 py-2 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all uppercase text-[10px] tracking-widest">Buy Now</button>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="luxury-card rounded-3xl overflow-hidden group">
-                <div class="overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&q=80&w=400" 
-                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl text-white font-serif mb-2">Silk Cream</h3>
-                    <span class="text-[#D4AF37] font-bold block mb-4">$16.00</span>
-                    <button class="w-full border border-white/20 py-2 rounded-full hover:bg-[#D4AF37] hover:text-black transition-all uppercase text-[10px] tracking-widest">Buy Now</button>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Coffee Journey -->
-   <!-- Coffee Journey (Animated) -->
-    <section id="journey" class="max-w-3xl mx-auto px-6 py-24 border-t border-white/[0.05]">
-        <h2 class="text-4xl font-serif text-white text-center mb-16">The Coffee Journey</h2>
-        <div class="relative border-l border-stone-800 ml-4 md:ml-0 space-y-12">
-            
-            <!-- Step 01 -->
-            <div onclick="openModal('Ethical Farm Sourcing', 'We source from high-altitude micro-lots, ensuring each bean is hand-picked at peak ripeness.')" 
-                 class="relative pl-8 group cursor-pointer transition-all duration-300 hover:scale-105">
-                <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37] shadow-[0_0_10px_#D4AF37]"></div>
-                <h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em] transition-colors group-hover:text-white">01</h3>
-                <p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Ethical Farm Sourcing</p>
-            </div>
-
-            <!-- Step 02 -->
-            <div onclick="openModal('Precision Selection', 'Rigorous quality testing where only the top 1% of Arabica beans qualify for our signature roast.')" 
-                 class="relative pl-8 group cursor-pointer transition-all duration-300 hover:scale-105">
-                <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37] shadow-[0_0_10px_#D4AF37]"></div>
-                <h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em] transition-colors group-hover:text-white">02</h3>
-                <p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Precision Selection</p>
-            </div>
-
-            <!-- Step 03 -->
-            <div onclick="openModal('Artisanal Roasting', 'Small batch roasting using mathematical precision to unlock hidden flavor profiles.')" 
-                 class="relative pl-8 group cursor-pointer transition-all duration-300 hover:scale-105">
-                <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-[#D4AF37] shadow-[0_0_10px_#D4AF37]"></div>
-                <h3 class="text-[#D4AF37] text-sm uppercase tracking-[0.2em] transition-colors group-hover:text-white">03</h3>
-                <p class="text-white text-2xl font-serif group-hover:text-[#D4AF37] transition-colors">Artisanal Roasting</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Modal Popup -->
-    <div id="coffeeModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-        <div class="bg-[#1a1918] border border-[#D4AF37]/30 p-8 rounded-3xl max-w-lg w-full relative">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-white hover:text-[#D4AF37]">✕</button>
-            <h3 id="modalTitle" class="text-3xl font-serif text-[#D4AF37] mb-4"></h3>
-            <p id="modalBody" class="text-stone-300 leading-relaxed"></p>
-        </div>
-    </div>
-
-    <!-- Sub-Gallery -->
-    <section class="max-w-xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 gap-4">
-            <div class="h-40 rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover"></div>
-            <div class="h-40 rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover"></div>
-            <div class="h-40 rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover"></div>
-        </div>
-    </section>
-
-    <!-- Main Gallery -->
-    <section class="max-w-7xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-serif text-white text-center mb-16">The Velvet Gallery</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="h-80 rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover"></div>
-            <div class="h-80 rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover"></div>
-            <div class="h-80 rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover"></div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 border-t border-white/[0.05] text-center text-stone-500 text-xs uppercase tracking-widest"> &copy; 2026 Velvet Brew. All Rights Reserved. </footer>
-
-    <script>
-        function openModal(title, body) {
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalBody').innerText = body;
-            document.getElementById('coffeeModal').classList.remove('hidden');
-            document.getElementById('coffeeModal').classList.add('flex');
-        }
-        function closeModal() {
-            document.getElementById('coffeeModal').classList.add('hidden');
-            document.getElementById('coffeeModal').classList.remove('flex');
-        }
-    </script>
+    <!-- JS فائل لنک -->
+    <script src="js/main.js"></script>
 </body>
 </html>
