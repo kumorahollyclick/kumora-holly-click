@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velvet Brew | Artisanal Luxury Coffee</title>
+    <title>The Menu | Velvet Brew</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Google Fonts -->
@@ -14,78 +14,101 @@
             background-color: #0B0A09;
             color: #F5F5F4;
             font-family: 'Urbanist', sans-serif;
-            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
         .font-serif {
             font-family: 'Cormorant Garamond', serif;
         }
-        @keyframes steam {
-            0% { transform: translateY(0) scale(0.9); opacity: 0.2; filter: blur(8px); }
-            50% { transform: translateY(-10px) scale(1.05); opacity: 0.4; filter: blur(4px); }
-            100% { transform: translateY(-20px) scale(1.1); opacity: 0; filter: blur(10px); }
-        }
-        .steam-effect {
-            animation: steam 4s ease-in-out infinite;
+        .luxury-card {
+            background: linear-gradient(180deg, rgba(28, 25, 23, 0.4) 0%, rgba(20, 18, 17, 0.6) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.03);
         }
     </style>
 </head>
 <body>
 
     <!-- 🌐 NAVIGATION NAVBAR -->
-    <header class="sticky top-0 z-50 px-6 py-4" style="background: rgba(11, 10, 9, 0.75); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(212, 175, 55, 0.04);">
+    <header class="sticky top-0 z-50 px-6 py-4" style="background: rgba(11, 10, 9, 0.85); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(212, 175, 55, 0.04);">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold tracking-widest text-[#F5F5F4] font-serif">
+            <a href="#" class="text-xl font-bold tracking-widest text-[#F5F5F4] font-serif">
                 VELVET <span class="text-[#D4AF37] font-light">BREW</span>
             </a>
             <nav class="hidden md:flex gap-8 text-[13px] font-medium tracking-widest uppercase">
-                <a href="index.html" class="text-[#D4AF37] transition duration-300">Home</a>
-                <a href="story.html" class="text-stone-400 hover:text-[#F5F5F4] transition duration-300">Our Story</a>
-                <a href="menu.html" class="text-stone-400 hover:text-[#F5F5F4] transition duration-300">The Menu</a>
-                <a href="gallery.html" class="text-stone-400 hover:text-[#F5F5F4] transition duration-300">Gallery</a>
+                <a href="#" class="text-[#D4AF37]">Home</a>
+                <a href="#story" class="text-stone-400 hover:text-[#F5F5F4] transition">Our Story</a>
+                <a href="#menu" class="text-stone-400 hover:text-[#F5F5F4] transition">The Menu</a>
             </nav>
-            <div>
-                <a href="menu.html" class="text-[12px] font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-500 border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B0A09]">
-                    Book A Table
-                </a>
-            </div>
         </div>
     </header>
 
-    <!-- 👑 HERO SECTION (HOME) -->
-    <section class="relative min-h-[85vh] flex items-center justify-center px-6 py-12 overflow-hidden">
+    <!-- 👑 HERO SECTION -->
+    <section class="min-h-[85vh] flex items-center justify-center px-6 py-12">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
             <div class="flex flex-col gap-6 text-left max-w-xl">
                 <span class="text-[12px] font-semibold tracking-[0.25em] uppercase text-[#D4AF37]">The Ultimate Coffee Experience</span>
                 <h1 class="text-5xl md:text-7xl font-bold font-serif leading-[1.1] text-white"> Crafted for the <span class="italic font-normal text-[#D4AF37]">Discerning</span> Palette. </h1>
-                <p class="text-stone-400 text-sm md:text-base leading-relaxed font-light"> Experience rich, freshly roasted single-origin espresso meticulously brewed to absolute perfection. Every single cup is an artful ritual tailored for your morning luxury. </p>
-                <div class="flex flex-col sm:flex-row gap-4 mt-4">
-                    <a href="menu.html" class="bg-[#D4AF37] text-[#0B0A09] text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-full text-center hover:transform hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-[#D4AF37]/10"> Explore Our Blends </a>
-                    <a href="story.html" class="border border-stone-700 text-white text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-full text-center hover:bg-stone-900 transition-all duration-300"> Our Story </a>
-                </div>
+                <p class="text-stone-400 text-sm md:text-base font-light"> Experience rich, freshly roasted single-origin espresso meticulously brewed to absolute perfection. </p>
+                <div class="mt-4"><a href="#menu" class="bg-[#D4AF37] text-[#0B0A09] text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-full"> Explore Our Blends </a></div>
             </div>
-            <div class="relative flex justify-center items-center">
-                <div class="absolute w-72 h-72 rounded-full bg-[#D4AF37]/5 blur-[80px]"></div>
-                <div class="relative z-10 p-4">
-                    <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
-                        <div class="w-20 h-32 bg-gradient-to-t from-white/10 to-transparent rounded-full steam-effect mb-40"></div>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Velvet Brew" class="w-[380px] h-[480px] object-cover rounded-[2rem] shadow-2xl border border-white/[0.03] grayscale hover:grayscale-0 transition-all duration-700">
+            <div class="flex justify-center">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" class="w-[380px] h-[480px] object-cover rounded-[2rem] border border-white/[0.03]">
+            </div>
+        </div>
+    </section>
+
+    <!-- 📜 OUR STORY SECTION -->
+    <section id="story" class="py-24 px-6 border-t border-white/[0.03]">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37] block mb-3">Why Velvet Brew</span>
+            <h2 class="text-3xl md:text-5xl font-bold font-serif text-white mb-12">The Pillars of Our Craft</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="luxury-card rounded-3xl p-8 flex flex-col gap-4">
+                    <div class="text-[#D4AF37] text-xl font-light">01 /</div>
+                    <h3 class="text-lg font-medium text-white">Rare Single-Origins</h3>
+                    <p class="text-stone-400 text-sm font-light">We source exclusively from micro-lot farms globally, picking only the top 1% of Arabica beans.</p>
+                </div>
+                <div class="luxury-card rounded-3xl p-8 flex flex-col gap-4">
+                    <div class="text-[#D4AF37] text-xl font-light">02 /</div>
+                    <h3 class="text-lg font-medium text-white">The Artisanal Roast</h3>
+                    <p class="text-stone-400 text-sm font-light">Roasted in small batches to unlock the absolute sweetest flavor notes possible.</p>
+                </div>
+                <div class="luxury-card rounded-3xl p-8 flex flex-col gap-4">
+                    <div class="text-[#D4AF37] text-xl font-light">03 /</div>
+                    <h3 class="text-lg font-medium text-white">Velvet Precision</h3>
+                    <p class="text-stone-400 text-sm font-light">Every temperature degree and second of extraction is calculated for perfect texture.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 🌟 LUXURY FOOTER -->
+    <!-- 💎 THE MENU SECTION -->
+    <section id="menu" class="py-24 px-6 border-t border-white/[0.03]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#D4AF37] block mb-3">Curated House Blends</span>
+                <h2 class="text-3xl md:text-5xl font-bold font-serif text-white">Experience The Liquid Luxury</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="luxury-card rounded-[2rem] p-5 flex flex-col gap-4">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover rounded-xl grayscale">
+                    <div class="flex justify-between items-center mt-2"><h3 class="text-md font-medium text-white">Gold Velvet Espresso</h3><span class="text-[#D4AF37] font-serif">$9.00</span></div>
+                </div>
+                <div class="luxury-card rounded-[2rem] p-5 flex flex-col gap-4">
+                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover rounded-xl grayscale">
+                    <div class="flex justify-between items-center mt-2"><h3 class="text-md font-medium text-white">Obsidian Dark Roast</h3><span class="text-[#D4AF37] font-serif">$11.50</span></div>
+                </div>
+                <div class="luxury-card rounded-[2rem] p-5 flex flex-col gap-4">
+                    <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&q=80&w=400" class="w-full h-48 object-cover rounded-xl grayscale">
+                    <div class="flex justify-between items-center mt-2"><h3 class="text-md font-medium text-white">The Silk Cream Latte</h3><span class="text-[#D4AF37] font-serif">$14.00</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🌟 FOOTER -->
     <footer class="py-12 px-6 border-t border-white/[0.03]" style="background-color: #080706;">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-center md:text-left">
-                <a href="index.html" class="text-lg font-bold tracking-widest text-[#F5F5F4] font-serif">
-                    VELVET <span class="text-[#D4AF37] font-light">BREW</span>
-                </a>
-            </div>
-            <div class="text-xs text-stone-600 font-light tracking-wider">
-                &copy; 2026 Velvet Brew. All Rights Reserved.
-            </div>
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-xs text-stone-600 font-light">
+            <span>VELVET BREW</span><span>&copy; 2026. All Rights Reserved.</span>
         </div>
     </footer>
 
