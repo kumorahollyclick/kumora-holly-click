@@ -324,3 +324,32 @@ h1, h2, h3, h4 {
     background-color: transparent;
     color: var(--primary-gold);
 }
+/* Luxury Contact Section Styling */
+.contact-section {
+    padding: 6rem 2rem;
+    background-color: #0b0a09; /* Velvet Black */
+    text-align: center;
+    border-top: 1px solid rgba(197, 168, 128, 0.15);
+}
+
+.contact-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: #f4f0ea;
+    margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+    font-size: 0.8rem;
+    color: #c5a880;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.contact-details p {
+    color: #f4f0ea;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0.5rem 0;
+}
