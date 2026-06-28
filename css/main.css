@@ -333,10 +333,22 @@ h1, h2, h3, h4 {
     margin-bottom: 20px; /* ٹیکسٹ سے تھوڑا فاصلہ رکھنے کے لیے */
 }
 
-.heritage-video video {
+/* Heritage Image Styling */
+.heritage-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* یہ ویڈیو کو باکس کے اندر پرفیکٹ فٹ کرے گا */
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.heritage-image img:hover {
+    transform: scale(1.02);
+}
+.heritage-image img:hover {
+    transform: scale(1.02); /* تصویر پر ماؤس لے جانے سے وہ تھوڑی بڑی ہوگی */
+}
 }
 .contact-section {
     padding: 6rem 2rem;
