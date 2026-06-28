@@ -324,7 +324,20 @@ h1, h2, h3, h4 {
     background-color: transparent;
     color: var(--primary-gold);
 }
-/* Luxury Contact Section Styling */
+/* Luxury Contact Section Styling *//* Heritage Video Styling */
+.heritage-video {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px; /* ٹیکسٹ سے تھوڑا فاصلہ رکھنے کے لیے */
+}
+
+.heritage-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* یہ ویڈیو کو باکس کے اندر پرفیکٹ فٹ کرے گا */
+}
 .contact-section {
     padding: 6rem 2rem;
     background-color: #0b0a09; /* Velvet Black */
