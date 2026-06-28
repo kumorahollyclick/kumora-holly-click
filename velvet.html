@@ -119,5 +119,35 @@
             </form>
         </div>
     </div>
+    <script>
+        // Luxury Preloader Engine
+        window.addEventListener('load', () => {
+            const preloader = document.querySelector('.luxury-preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    preloader.style.visibility = 'hidden';
+                }, 2500);
+            }
+        });
+
+        // Premium Booking Modal Interactive Engine
+        const bookBtn = document.querySelector('.btn-secondary');
+        const bookingModal = document.getElementById('bookingModal');
+        const modalOverlay = document.querySelector('.modal-overlay');
+
+        if (bookBtn && bookingModal) {
+            // Open Modal on Button Click with Velvet Smoothness
+            bookBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                bookingModal.classList.add('active');
+            });
+
+            // Close Modal when clicking on the luxury blurred overlay
+            modalOverlay.addEventListener('click', () => {
+                bookingModal.classList.remove('active');
+            });
+        }
+    </script>
 </body>
 </html>
