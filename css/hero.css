@@ -1,102 +1,102 @@
-/* Velvet Brew - Luxury Hero Section Styling */
+/* Velvet Brew - Luxury Hero Section & CTA Design Engine */
 .hero-section {
+    position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 0 4rem;
-    background: radial-gradient(circle at center, #1c1a17 0%, #0b0a09 100%);
+    align-items: center;
+    padding: 8rem 2rem 4rem 2rem;
+    background-color: var(--velvet-black);
     text-align: center;
-    position: relative;
     overflow: hidden;
 }
 
 .hero-content {
     max-width: 800px;
     z-index: 2;
-    animation: fadeIn 1.2s ease-out;
 }
 
 .hero-subtitle {
     font-family: var(--font-sans);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: var(--primary-gold);
-    display: inline-block;
     margin-bottom: 1.5rem;
+    display: inline-block;
 }
 
 .hero-title {
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 2rem;
+    line-height: 1.2;
     color: var(--rich-cream);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
 }
 
 .gold-text {
     color: var(--primary-gold);
-    font-style: italic;
-    font-weight: 400;
+    position: relative;
 }
 
 .hero-description {
     font-family: var(--font-sans);
-    font-size: 1.05rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #a29a8f;
     line-height: 1.8;
-    color: #b5b0a5;
     margin-bottom: 3rem;
-    font-weight: 200;
+    letter-spacing: 1px;
 }
 
-/* Premium CTA Buttons */
 .hero-cta-group {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    align-items: center;
 }
 
+/* Base CTA Button Styles */
 .btn-primary, .btn-secondary {
     font-family: var(--font-sans);
     font-size: 0.85rem;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-decoration: none;
     padding: 1.2rem 2.5rem;
-    transition: all 0.4s ease;
+    text-decoration: none;
+    border-radius: 0;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Explore Menu - Solid Gold Luxury Button */
 .btn-primary {
     background-color: var(--primary-gold);
     color: var(--velvet-black);
-    font-weight: 500;
+    border: 1px solid var(--primary-gold);
 }
 
 .btn-primary:hover {
-    background-color: var(--rich-cream);
-    transform: translateY(-3px);
+    background-color: transparent;
+    color: var(--primary-gold);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(197, 168, 128, 0.15);
 }
 
+/* Book a Table - Elegant Transparent Button */
 .btn-secondary {
-    border: 1px solid rgba(197, 168, 128, 0.4);
+    background-color: transparent;
     color: var(--rich-cream);
+    border: 1px solid rgba(244, 240, 234, 0.3);
 }
 
 .btn-secondary:hover {
     border-color: var(--primary-gold);
-    background-color: rgba(197, 168, 128, 0.05);
-    transform: translateY(-3px);
-}
-
-/* Smooth FadeIn Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    color: var(--velvet-black);
+    background-color: var(--primary-gold);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(197, 168, 128, 0.15);
 }
