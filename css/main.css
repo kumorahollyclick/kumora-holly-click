@@ -30,11 +30,9 @@
     color: var(--velvet-black);
 }
 
-html {
-    scroll-behavior: smooth;
-    background-color: var(--velvet-black);
-    color: var(--rich-cream);
-    overflow-x: hidden;
+<div class="heritage-image">
+    <img src="coffee.jpg.avif" alt="Our Heritage">
+</div>
 }
 
 body {
