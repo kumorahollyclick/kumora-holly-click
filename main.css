@@ -1,0 +1,36 @@
+/* Velvet Brew - Luxury Design Tokens & Base Setup */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;400;500&display=swap');
+
+:root {
+    /* Brand Luxury Colors */
+    --primary-gold: #c5a880;
+    --dark-gold: #a3855c;
+    --velvet-black: #0b0a09;
+    --rich-cream: #f9f6f0;
+    --warm-gray: #1c1a17;
+    
+    /* Premium Fonts */
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+/* Global Reset for Agency Level Performance */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--velvet-black);
+    color: var(--rich-cream);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    letter-spacing: 1px;
+}
