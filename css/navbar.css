@@ -1,66 +1,60 @@
-/* Velvet Brew - Luxury Navbar Styling */
-.luxury-nav {
+/* Agency Grade Luxury Preloader Styles & Animations */
+.luxury-preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-    background: rgba(11, 10, 9, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(197, 168, 128, 0.15);
-    padding: 1.5rem 4rem;
+    height: 100%;
+    background-color: var(--velvet-black);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    transition: all 0.4s ease;
+    z-index: 9999;
+    animation: fadeOutLuxury 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    animation-delay: 1.8s;
+    pointer-events: none;
 }
 
-.nav-logo {
+.preloader-content {
+    text-align: center;
+}
+
+.preloader-logo {
     font-family: var(--font-serif);
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--primary-gold);
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 3rem;
-    list-style: none;
-}
-
-.nav-links a {
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 400;
+    font-size: 2.5rem;
+    font-weight: 300;
     color: var(--rich-cream);
-    text-decoration: none;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
+    letter-spacing: 8px;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeInLogo 1s ease forwards 0.3s;
 }
 
-.nav-links a:hover {
-    color: var(--primary-gold);
-}
-/* Luxury Hover Underline Animation */
-.nav-links a {
-    position: relative;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
+.preloader-line {
     width: 0;
-    height: 1.5px;
-    background-color: var(--primary-gold);
-    transition: width 0.3s ease;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--primary-gold), transparent);
+    margin: 0 auto;
+    animation: expandLine 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards 0.5s;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+/* Luxury Animation Keyframes */
+@keyframes fadeInLogo {
+    to {
+        opacity: 1;
+        letter-spacing: 12px;
+    }
+}
+
+@keyframes expandLine {
+    to {
+        width: 180px;
+    }
+}
+
+@keyframes fadeOutLuxury {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
